@@ -1,4 +1,5 @@
-import useAMRAPTimer from '../hooks/useAMRAPTimer';
+import { Button } from '@mui/material';
+import useAMRAPTimer from '../hooks/timers/useAMRAPTimer';
 
 const AMRAPTimer: React.FC = () => {
 	const { time, rounds, startTimer, pauseTimer, resetTimer } = useAMRAPTimer(60);
@@ -14,9 +15,9 @@ const AMRAPTimer: React.FC = () => {
 			<p>Time: {time}</p>
 			<p>Rounds: {rounds}</p>
 			{BUTTONS.map(btn => (
-				<button key={btn.name} onClick={() => btn.action()}>
+				<Button key={btn.name} onClick={() => btn.action()}>
 					{btn.name.toUpperCase()}
-				</button>
+				</Button>
 			))}
 		</>
 	);

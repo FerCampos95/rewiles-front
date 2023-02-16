@@ -1,6 +1,7 @@
 import { Theme } from '@mui/material/styles';
 import { merge } from 'lodash';
 import Alert from './Alert';
+import Button from './Button';
 import Input from './Input';
 import Paper from './Paper';
 import Tooltip from './Tooltip';
@@ -61,10 +62,11 @@ import Typography from './Typography';
 export default function ComponentsOverrides(theme: Theme) {
 	return merge(
 		Alert(theme),
+		Button(theme),
 		Paper(theme),
 		Input(theme),
 		Tooltip(theme),
-		/* Button(theme),
+		/*
     DataGrid(theme),
     Dialog(theme),
     Divider(theme),

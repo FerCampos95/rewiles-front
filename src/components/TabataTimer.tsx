@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 
 import useTabataTimer from '../hooks/timers/useTabataTimer';
@@ -21,9 +22,9 @@ const TabataTimer: React.FC = () => {
 			<p>Rest: {rest}</p>
 			<p>Rounds: {rounds}</p>
 			{BUTTONS.map(btn => (
-				<button key={btn.name} onClick={() => btn.action()}>
+				<Button key={btn.name} onClick={() => btn.action()}>
 					{btn.name.toUpperCase()}
-				</button>
+				</Button>
 			))}
 		</>
 	);
