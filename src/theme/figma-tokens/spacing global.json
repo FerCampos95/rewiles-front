@@ -1,0 +1,46 @@
+{
+  "Spacing Global": {
+    "spacing": {
+      "0x": {
+        "value": "0px",
+        "type": "spacing"
+      },
+      ",5x": {
+        "value": "2px",
+        "type": "spacing"
+      },
+      "1x": {
+        "value": "4px",
+        "type": "spacing"
+      },
+      "2x": {
+        "value": "8px",
+        "type": "spacing"
+      },
+      "3x": {
+        "value": "12px",
+        "type": "spacing"
+      },
+      "4x": {
+        "value": "16px",
+        "type": "spacing"
+      },
+      "8x": {
+        "value": "32px",
+        "type": "spacing"
+      },
+      "16x": {
+        "value": "64px",
+        "type": "spacing"
+      },
+      "32x": {
+        "value": "128px",
+        "type": "spacing"
+      },
+      "64x": {
+        "value": "256px",
+        "type": "spacing"
+      }
+    }
+  }
+}

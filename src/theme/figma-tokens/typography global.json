@@ -1,0 +1,281 @@
+{
+  "h1": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "60px",
+      "lineHeight": "70px"
+    },
+    "type": "typography"
+  },
+  "h2": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "48px",
+      "lineHeight": "54px"
+    },
+    "type": "typography"
+  },
+  "h3": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "34px",
+      "lineHeight": "40px"
+    },
+    "type": "typography"
+  },
+  "h4": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "24px",
+      "lineHeight": "30px"
+    },
+    "type": "typography"
+  },
+  "h5": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "20px",
+      "lineHeight": "26px"
+    },
+    "type": "typography"
+  },
+  "h6": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "18px",
+      "lineHeight": "24px"
+    },
+    "type": "typography"
+  },
+  "Avatar Initials": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "20px",
+      "lineHeight": "20px"
+    },
+    "type": "typography"
+  },
+  "subtitle1": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "18px",
+      "lineHeight": "24px"
+    },
+    "type": "typography"
+  },
+  "body1": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "16px",
+      "lineHeight": "25px"
+    },
+    "type": "typography"
+  },
+  "Menu Item": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "16px",
+      "lineHeight": "24px"
+    },
+    "type": "typography"
+  },
+  "Input Text": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "16px",
+      "lineHeight": "24px"
+    },
+    "type": "typography"
+  },
+  "Alert Title": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "16px",
+      "lineHeight": "24px"
+    },
+    "type": "typography"
+  },
+  "button": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "16px",
+      "lineHeight": "22px",
+      "textCase": "none",
+      "letterSpacing": "0.5"
+    },
+    "type": "typography"
+  },
+  "Bottom Navigation Active Label": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "24px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Menu Item Dense": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "24px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Table Header": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "16px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Button Medium": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "15px",
+      "lineHeight": "22px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Button Large": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "16px",
+      "lineHeight": "26px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Button Small": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "14px",
+      "lineHeight": "18px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "subtitle2": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "16px",
+      "lineHeight": "24px",
+      "textCase": ""
+    },
+    "type": "typography"
+  },
+  "body2": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "300",
+      "fontSize": "16px",
+      "lineHeight": "25px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "List Subheader": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "48px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Chip": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "18px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "overline": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "32px",
+      "textCase": "uppercase"
+    },
+    "type": "typography"
+  },
+  "caption": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "500",
+      "fontSize": "14px",
+      "lineHeight": "20px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Helper Text": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "400",
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Badge Label": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "700",
+      "fontSize": "12px",
+      "lineHeight": "20px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Input Label": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "400",
+      "fontSize": "14px",
+      "lineHeight": "16px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  },
+  "Tooltip": {
+    "value": {
+      "fontFamily": "Yantramanav",
+      "fontWeight": "400",
+      "fontSize": "12px",
+      "lineHeight": "16px",
+      "textCase": "none"
+    },
+    "type": "typography"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Radius Global": {
+    "radius": {
+      "s": {
+        "value": "4",
+        "type": "borderRadius"
+      },
+      "m": {
+        "value": "8",
+        "type": "borderRadius"
+      },
+      "l": {
+        "value": "16",
+        "type": "borderRadius"
+      }
+    }
+  }
+}

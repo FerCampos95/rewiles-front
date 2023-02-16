@@ -1,0 +1,194 @@
+{
+  "Shadow Global": {
+    "shadow": {
+      "primary": {
+        "value": [
+          {
+            "color": "$blue.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "info": {
+        "value": [
+          {
+            "color": "$lightblue.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "secondary": {
+        "value": [
+          {
+            "color": "$purple.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "success": {
+        "value": [
+          {
+            "color": "$green.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "warning": {
+        "value": [
+          {
+            "color": "$yellow.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "error": {
+        "value": [
+          {
+            "color": "$red.shadow",
+            "type": "dropShadow",
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "xs": {
+        "value": [
+          {
+            "x": "0",
+            "y": "1",
+            "blur": "2",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "s": {
+        "value": [
+          {
+            "x": "0",
+            "y": "8",
+            "blur": "16",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "m": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "12",
+            "blur": "24",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "l": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "16",
+            "blur": "32",
+            "spread": "-4",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "xl": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "2",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "20",
+            "blur": "40",
+            "spread": "-4",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      },
+      "xxl": {
+        "value": [
+          {
+            "x": "0",
+            "y": "0",
+            "blur": "4",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          },
+          {
+            "x": "0",
+            "y": "24",
+            "blur": "48",
+            "spread": "0",
+            "color": "$grey.shadow",
+            "type": "dropShadow"
+          }
+        ],
+        "type": "boxShadow"
+      }
+    }
+  }
+}
