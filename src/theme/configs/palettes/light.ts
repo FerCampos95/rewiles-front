@@ -1,4 +1,4 @@
-import figmaColors from '../figma-tokens/color global.json';
+import figmaColors from '../../figma-tokens/color global.json';
 
 export const colors = figmaColors['Color Global'];
 
@@ -6,53 +6,53 @@ export function createGradient(color1: string, color2: string) {
   return `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
 
-// SETUP DARK COLORS
+// SETUP COLORS
 const PRIMARY = {
-  lighter: colors.blue[50].value,
-  light: colors.blue[200].value,
-  main: colors.blue[400].value,
+  lighter: colors.blue[200].value,
+  light: colors.blue[400].value,
+  main: colors.blue[500].value,
   dark: colors.blue[600].value,
-  darker: colors.blue[800].value,
+  darker: colors.blue[700].value,
   shadow: colors.blue.shadow.value,
 };
 const SECONDARY = {
-  lighter: colors.purple[100].value,
-  light: colors.purple[300].value,
-  main: colors.purple[400].value,
-  dark: colors.purple[500].value,
-  darker: colors.purple[600].value,
+  lighter: colors.purple[200].value,
+  light: colors.purple[400].value,
+  main: colors.purple[500].value,
+  dark: colors.purple[600].value,
+  darker: colors.purple[700].value,
   shadow: colors.purple.shadow.value,
 };
 const INFO = {
-  lighter: colors.lightblue[100].value,
-  light: colors.lightblue[300].value,
-  main: colors.lightblue[400].value,
-  dark: colors.lightblue[500].value,
-  darker: colors.lightblue[600].value,
+  lighter: colors.lightblue[200].value,
+  light: colors.lightblue[400].value,
+  main: colors.lightblue[500].value,
+  dark: colors.lightblue[600].value,
+  darker: colors.lightblue[700].value,
   shadow: colors.lightblue.shadow.value,
 };
 const SUCCESS = {
-  lighter: colors.green[100].value,
-  light: colors.green[300].value,
-  main: colors.green[400].value,
-  dark: colors.green[500].value,
-  darker: colors.green[600].value,
+  lighter: colors.green[200].value,
+  light: colors.green[400].value,
+  main: colors.green[500].value,
+  dark: colors.green[600].value,
+  darker: colors.green[700].value,
   shadow: colors.green.shadow.value,
 };
 const WARNING = {
-  lighter: colors.yellow[100].value,
-  light: colors.yellow[300].value,
-  main: colors.yellow[400].value,
-  dark: colors.yellow[500].value,
-  darker: colors.yellow[600].value,
+  lighter: colors.yellow[200].value,
+  light: colors.yellow[400].value,
+  main: colors.yellow[500].value,
+  dark: colors.yellow[600].value,
+  darker: colors.yellow[700].value,
   shadow: colors.yellow.shadow.value,
 };
 const ERROR = {
-  lighter: colors.red[100].value,
-  light: colors.red[300].value,
-  main: colors.red[400].value,
-  dark: colors.red[500].value,
-  darker: colors.red[600].value,
+  lighter: colors.red[200].value,
+  light: colors.red[400].value,
+  main: colors.red[500].value,
+  dark: colors.red[600].value,
+  darker: colors.red[700].value,
   shadow: colors.red.shadow.value,
 };
 
@@ -119,11 +119,11 @@ const COMMON = {
   },
 };
 
-const darkPalette = {
+const lightPalette = {
   ...COMMON,
-  text: { primary: GREY[100], secondary: GREY[400], disabled: GREY[500] },
-  background: { paper: GREY[800], default: GREY[900], neutral: GREY[500_16] },
-  action: { active: GREY[400], ...COMMON.action },
+  text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
+  background: { paper: GREY[100], default: GREY[100], neutral: GREY[200] },
+  action: { active: GREY[600], ...COMMON.action },
 };
 
-export default darkPalette;
+export default lightPalette;

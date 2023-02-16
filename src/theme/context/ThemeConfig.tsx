@@ -9,13 +9,13 @@ import {
 // hooks
 import useSettings from './SettingsContext';
 //
-import shape from '../shape';
-import palette from '../palette';
-import typography from '../typography';
-import breakpoints from '../breakpoints';
+import shape from '../configs/shape';
+import palette from '../configs/palette';
+import typography from '../configs/typography';
+import breakpoints from '../configs/breakpoints';
 import componentsOverride from '../overrides';
-import shadows, { customShadows } from '../shadows';
-import spacing from '../spacing';
+import shadows, { customShadows } from '../configs/shadows';
+import spacing from '../configs/spacing';
 import GlobalStyles from '../globalStyles';
 import { MemUIThemeWrapperProvider } from './ThemeContext';
 

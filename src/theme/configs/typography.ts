@@ -1,5 +1,5 @@
-import figmaTypographyJson from './figma-tokens/typography global.json';
-import { ExtendedTypographyOptions } from './types';
+import figmaTypographyJson from '../figma-tokens/typography global.json';
+import { ExtendedTypographyOptions } from '../types';
 
 const Global = figmaTypographyJson;
 
