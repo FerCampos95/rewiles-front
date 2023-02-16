@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useTabataTimer from '../hooks/useTabataTimer';
+import useTabataTimer from '../hooks/timers/useTabataTimer';
 
 const TabataTimer: React.FC = () => {
   const { time, rest, rounds, startTimer, pauseTimer, restartTimer } = useTabataTimer({

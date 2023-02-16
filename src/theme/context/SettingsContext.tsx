@@ -1,6 +1,5 @@
+import useLocalStorage from '@/hooks/utils/useLocalStorage';
 import { ReactNode, createContext, useContext } from 'react';
-// hooks
-import useLocalStorage from '../../hooks/useLocalStorage';
 
 type ThemeMode = 'light' | 'dark';
 

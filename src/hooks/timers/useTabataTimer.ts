@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import useBeep from './useBeep';
+import useBeep from '../utils/useBeep';
 
 interface ITabataTimerState {
   time: number;
