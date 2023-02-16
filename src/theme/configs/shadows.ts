@@ -3,7 +3,7 @@ import { Shadows } from '@mui/material/styles/shadows';
 
 import palette from './palette';
 
-import Global from './figma-tokens/shadow global.json';
+import Global from '../figma-tokens/shadow global.json';
 
 const FigmaShadows = Global['Shadow Global'].shadow;
 

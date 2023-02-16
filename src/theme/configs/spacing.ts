@@ -1,4 +1,4 @@
-import Global from './figma-tokens/spacing global.json';
+import Global from '../figma-tokens/spacing global.json';
 
 const FigmaSpacing = Global['Spacing Global'].spacing;
 

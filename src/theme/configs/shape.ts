@@ -1,4 +1,4 @@
-import Globals from './figma-tokens/radius global.json';
+import Globals from '../figma-tokens/radius global.json';
 
 const FigmaRadius = Globals['Radius Global'].radius;
 
