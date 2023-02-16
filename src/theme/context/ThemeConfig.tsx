@@ -2,9 +2,9 @@ import { useMemo, ReactNode } from 'react';
 // material
 import { CssBaseline } from '@mui/material';
 import {
-  createTheme,
-  ThemeOptions,
-  StyledEngineProvider,
+	createTheme,
+	ThemeOptions,
+	StyledEngineProvider,
 } from '@mui/material/styles';
 // hooks
 import useSettings from './SettingsContext';
@@ -26,32 +26,32 @@ type ThemeConfigProps = {
 };
 
 export default function ThemeConfig({ children }: ThemeConfigProps) {
-  const { themeMode, toggleMode } = useSettings();
-  const isLight = themeMode === 'light';
+	const { themeMode, toggleMode } = useSettings();
+	const isLight = themeMode === 'light';
 
-  const themeOptions: ThemeOptions = useMemo(
-    () => ({
-      palette: isLight ? { ...palette.light, mode: 'light' } : { ...palette.dark, mode: 'dark' },
-      shape,
-      typography,
-      breakpoints,
-      spacing,
-      shadows: isLight ? shadows.light : shadows.dark,
-      customShadows: isLight ? customShadows.light : customShadows.dark,
-    }),
-    [isLight],
-  );
+	const themeOptions: ThemeOptions = useMemo(
+		() => ({
+			palette: isLight ? { ...palette.light, mode: 'light' } : { ...palette.dark, mode: 'dark' },
+			shape,
+			typography,
+			breakpoints,
+			spacing,
+			shadows: isLight ? shadows.light : shadows.dark,
+			customShadows: isLight ? customShadows.light : customShadows.dark,
+		}),
+		[isLight],
+	);
 
-  const theme = createTheme(themeOptions);
-  theme.components = componentsOverride(theme);
+	const theme = createTheme(themeOptions);
+	theme.components = componentsOverride(theme);
 
-  return (
-    <StyledEngineProvider injectFirst>
-      <MemUIThemeWrapperProvider theme={theme} toggleMode={toggleMode}>
-        <CssBaseline />
-        <GlobalStyles />
-        {children}
-      </MemUIThemeWrapperProvider>
-    </StyledEngineProvider>
-  );
+	return (
+		<StyledEngineProvider injectFirst>
+			<MemUIThemeWrapperProvider theme={theme} toggleMode={toggleMode}>
+				<CssBaseline />
+				<GlobalStyles />
+				{children}
+			</MemUIThemeWrapperProvider>
+		</StyledEngineProvider>
+	);
 }

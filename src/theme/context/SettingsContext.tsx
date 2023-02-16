@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import useLocalStorage from '@/hooks/utils/useLocalStorage';
 import { ReactNode, createContext, useContext } from 'react';
 
@@ -9,8 +10,8 @@ type SettingsContextProps = {
 };
 
 const initialState: SettingsContextProps = {
-  themeMode: 'dark',
-  toggleMode: () => {},
+	themeMode: 'dark',
+	toggleMode: () => {},
 };
 
 const SettingsContext = createContext(initialState);
@@ -20,28 +21,28 @@ type SettingsThemeProviderProps = {
 };
 
 function SettingsThemeProvider({ children }: SettingsThemeProviderProps) {
-  const [settings, setSettings] = useLocalStorage('settings', {
-    themeMode: initialState.themeMode,
-  });
+	const [settings, setSettings] = useLocalStorage('settings', {
+		themeMode: initialState.themeMode,
+	});
 
-  const toggleMode = () => {
-    setSettings({
-      ...settings,
-      themeMode: settings.themeMode === 'light' ? 'dark' : 'light',
-    });
-  };
+	const toggleMode = () => {
+		setSettings({
+			...settings,
+			themeMode: settings.themeMode === 'light' ? 'dark' : 'light',
+		});
+	};
 
-  return (
-    <SettingsContext.Provider
-      // eslint-disable-next-line react/jsx-no-constructed-context-values
-      value={{
-        ...settings,
-        toggleMode,
-      }}
-    >
-      {children}
-    </SettingsContext.Provider>
-  );
+	return (
+		<SettingsContext.Provider
+			// eslint-disable-next-line react/jsx-no-constructed-context-values
+			value={{
+				...settings,
+				toggleMode,
+			}}
+		>
+			{children}
+		</SettingsContext.Provider>
+	);
 }
 
 const useSettings = () => useContext(SettingsContext);

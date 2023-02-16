@@ -59,19 +59,19 @@ import Typography from './Typography';
 // ----------------------------------------------------------------------
 
 export default function ComponentsOverrides(theme: Theme) {
-  return merge(
-    Alert(theme),
-    Paper(theme),
-    Input(theme),
-    Tooltip(theme),
-    /* Button(theme),
+	return merge(
+		Alert(theme),
+		Paper(theme),
+		Input(theme),
+		Tooltip(theme),
+		/* Button(theme),
     DataGrid(theme),
     Dialog(theme),
     Divider(theme),
     Select(theme),
     Switch(theme),
     Table(theme), */
-    /*
+		/*
     Accordion(theme),
     Autocomplete(theme),
     Avatar(theme),
@@ -113,5 +113,5 @@ export default function ComponentsOverrides(theme: Theme) {
     TreeView(theme),
     Typography(theme),
     */
-  );
+	);
 }

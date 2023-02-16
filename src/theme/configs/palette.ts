@@ -18,12 +18,12 @@ export interface ChartPaletteOptions {
 }
 
 const palette = {
-  light: {
-    ...lightPalette,
-  },
-  dark: {
-    ...darkPalette,
-  },
+	light: {
+		...lightPalette,
+	},
+	dark: {
+		...darkPalette,
+	},
 };
 
 export default palette;

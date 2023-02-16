@@ -1,9 +1,9 @@
-import EMOMTimer from "@/components/EMOMTimer"
+import EMOMTimer from '@/components/EMOMTimer';
 
 const EMOM = () => {
-  return (
-    <EMOMTimer />
-  )
-}
+	return (
+		<EMOMTimer />
+	);
+};
 
 export default EMOM;

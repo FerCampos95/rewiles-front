@@ -1,8 +1,8 @@
 import {
-  PaletteColor as PaletteColorDefault,
-  TypeBackground as TypeBackgroundDefault,
-  Color as ColorDefault,
-  Theme } from '@mui/material';
+	PaletteColor as PaletteColorDefault,
+	TypeBackground as TypeBackgroundDefault,
+	Color as ColorDefault,
+	Theme } from '@mui/material';
 import { TypographyOptions } from '@mui/material/styles/createTypography';
 import { ChartPaletteOptions, GradientsPaletteOptions } from '../palette';
 import { CustomShadowOptions } from '../shadows';

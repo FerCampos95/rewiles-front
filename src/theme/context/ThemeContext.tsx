@@ -15,16 +15,16 @@ interface MemUIThemeWrapperProviderProps {
   toggleMode: () => void;
 }
 export const MemUIThemeWrapperProvider: FC<MemUIThemeWrapperProviderProps> = (props) => {
-  const { children, theme, toggleMode } = props;
+	const { children, theme, toggleMode } = props;
 
-  return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <MemUIThemeWrapperContext.Provider value={{ theme, toggleMode }}>
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
-    </MemUIThemeWrapperContext.Provider>
-  );
+	return (
+	// eslint-disable-next-line react/jsx-no-constructed-context-values
+		<MemUIThemeWrapperContext.Provider value={{ theme, toggleMode }}>
+			<ThemeProvider theme={theme}>
+				{children}
+			</ThemeProvider>
+		</MemUIThemeWrapperContext.Provider>
+	);
 };
 
 export const useMemUITheme = () => React.useContext(MemUIThemeWrapperContext);

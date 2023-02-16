@@ -7,11 +7,11 @@ interface IProvider {
 }
 
 const MemUIThemeProvider: FC<IProvider> = ({ children }) => (
-  <SettingsThemeProvider>
-    <ThemeConfig>
-      {children}
-    </ThemeConfig>
-  </SettingsThemeProvider>
+	<SettingsThemeProvider>
+		<ThemeConfig>
+			{children}
+		</ThemeConfig>
+	</SettingsThemeProvider>
 );
 
 export default MemUIThemeProvider;

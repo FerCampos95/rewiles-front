@@ -1,9 +1,9 @@
-import TabataTimer from "@/components/TabataTimer"
+import TabataTimer from '@/components/TabataTimer';
 
 const Tabata = () => {
-  return (
-    <TabataTimer />
-  )
-}
+	return (
+		<TabataTimer />
+	);
+};
 
 export default Tabata;
