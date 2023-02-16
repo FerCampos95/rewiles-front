@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,6 +12,9 @@ export default function Home() {
       </Head>
       <main>
         HOME PAGE
+        <Button variant="contained">
+          This is a custom button
+        </Button>
       </main>
     </>
   )

@@ -37,6 +37,7 @@ const useTabataTimer = (props?: ITabata): ITabataTimerState => {
         return;
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tabata, intervalId]);
 
   const pauseTimer = () => {
