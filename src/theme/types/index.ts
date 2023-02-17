@@ -4,8 +4,8 @@ import {
 	Color as ColorDefault,
 	Theme } from '@mui/material';
 import { TypographyOptions } from '@mui/material/styles/createTypography';
-import { ChartPaletteOptions, GradientsPaletteOptions } from '../palette';
-import { CustomShadowOptions } from '../shadows';
+import { ChartPaletteOptions, GradientsPaletteOptions } from '../configs/palette';
+import { CustomShadowOptions } from '../configs/shadows';
 
 interface PaletteColor extends PaletteColorDefault {
   lighter: string;
