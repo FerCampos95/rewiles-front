@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Grid, Stack, Typography } from '@mui/material';
 import useAMRAPTimer from '../hooks/timers/useAMRAPTimer';
 
 const AMRAPTimer: React.FC = () => {
@@ -11,15 +11,26 @@ const AMRAPTimer: React.FC = () => {
 	];
 
 	return (
-		<>
-			<p>Time: {time}</p>
-			<p>Rounds: {rounds}</p>
-			{BUTTONS.map(btn => (
-				<Button key={btn.name} onClick={() => btn.action()}>
-					{btn.name.toUpperCase()}
-				</Button>
-			))}
-		</>
+		<Stack
+			height="100vh"
+			gap={4}
+			alignItems="center"
+			justifyContent="center"
+		>
+			<Typography variant='h3'>
+        Time: {time}
+			</Typography>
+			<Typography variant='h3'>
+        Rounds: {rounds}
+			</Typography>
+			<Grid container gap={4} justifyContent="center">
+				{BUTTONS.map(btn => (
+					<Button key={btn.name} onClick={() => btn.action()}>
+						{btn.name.toUpperCase()}
+					</Button>
+				))}
+			</Grid>
+		</Stack>
 	);
 };
 

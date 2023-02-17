@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 
 import useTabataTimer from '../hooks/timers/useTabataTimer';
@@ -17,16 +17,29 @@ const TabataTimer: React.FC = () => {
 	];
 
 	return (
-		<>
-			<p style={{ textAlign: 'center' }}>Time: {time}</p>
-			<p>Rest: {rest}</p>
-			<p>Rounds: {rounds}</p>
-			{BUTTONS.map(btn => (
-				<Button key={btn.name} onClick={() => btn.action()}>
-					{btn.name.toUpperCase()}
-				</Button>
-			))}
-		</>
+		<Stack
+			height="100vh"
+			gap={4}
+			alignItems="center"
+			justifyContent="center"
+		>
+			<Typography variant='h3'>
+				Time: {time}
+			</Typography>
+			<Typography variant='h3'>
+				Rest: {rest}
+			</Typography>
+			<Typography variant='h3'>
+				Rounds: {rounds}
+			</Typography>
+			<Grid container gap={4} justifyContent="center">
+				{BUTTONS.map(btn => (
+					<Button key={btn.name} onClick={() => btn.action()}>
+						{btn.name.toUpperCase()}
+					</Button>
+				))}
+			</Grid>
+		</Stack>
 	);
 };
 
