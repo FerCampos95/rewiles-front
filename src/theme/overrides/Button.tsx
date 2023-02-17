@@ -5,7 +5,7 @@ export default function Button(theme: Theme) {
 	return {
 		MuiButton: {
 			defaultProps: {
-				variant: 'contained',
+				variant: 'contained' as const,
 			},
 			styleOverrides: {
 				root: {

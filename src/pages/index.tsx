@@ -12,7 +12,7 @@ export default function Home() {
 			</Head>
 			<main>
         HOME PAGE
-				<Button variant="contained">
+				<Button>
           This is a custom button
 				</Button>
 			</main>
