@@ -4,9 +4,9 @@
     "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
-    "name": "Azkar-fit",
-    "short_name": "Azkar",
-    "description": "Manage your exercise routine",
+    "name": "Zautek",
+    "short_name": "Zautek",
+    "description": "Management",
     "icons": [
         {
             "src": "/icon-192x192.png",
