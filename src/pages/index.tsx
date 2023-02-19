@@ -1,6 +1,5 @@
-import { Button, Grid, Link, Stack, Typography } from '@mui/material';
+import { Grid, Stack, Typography } from '@mui/material';
 import Head from 'next/head';
-import NextLink from 'next/link';
 
 export default function Home() {
 	return (
@@ -19,15 +18,6 @@ export default function Home() {
 					gap={4}
 				>
 					<Typography variant="h1">Welcome to Zautek</Typography>
-					<NextLink href="/timers" style={{ textDecoration: 'none' }}>
-						<Link
-							component={Button}
-							color="text.primary"
-							underline="none"
-						>
-							Go to Timers
-						</Link>
-					</NextLink>
 				</Stack>
 			</main>
 		</Grid>
