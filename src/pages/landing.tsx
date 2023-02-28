@@ -1,3 +1,4 @@
+import { Container, Grid, Stack, Typography } from '@mui/material';
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useRef } from 'react';
 
@@ -8,12 +9,14 @@ function landing() {
 	const parallax = useRef<IParallax>(null!);
 
 	return (
-		<div style={{ width: '100%', height: '100%', background: '#253237' }}>
+		<div style={{ width: '100%', height: '100%', background: '#0D0D0D' }}>
 			<Parallax ref={parallax} pages={3}>
-				<ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
-				<ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+				<ParallaxLayer offset={0} speed={1} style={{ backgroundColor: '#805E73' }} />
 
-				<ParallaxLayer
+				{/* <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} /> */}
+
+				{/* STARS */}
+				{/* <ParallaxLayer
 					offset={0}
 					speed={0}
 					factor={3}
@@ -21,13 +24,14 @@ function landing() {
 						backgroundImage: url('stars', true),
 						backgroundSize: 'cover',
 					}}
-				/>
+				/> */}
 			
-				<ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
+				{/* <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
 					<img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-				</ParallaxLayer>
+				</ParallaxLayer> */}
 
-				<ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+				{/* CLOUDS */}
+				{/* <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
 					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
 					<img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
 				</ParallaxLayer>
@@ -51,9 +55,10 @@ function landing() {
 				<ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
 					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
 					<img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
-				</ParallaxLayer>
+				</ParallaxLayer> */}
 
-				<ParallaxLayer
+				{/* earth 3ra pagina */}
+				{/* <ParallaxLayer
 					offset={2.5}
 					speed={-0.4}
 					style={{
@@ -63,9 +68,10 @@ function landing() {
 						pointerEvents: 'none',
 					}}>
 					<img src={url('earth')} style={{ width: '60%' }} />
-				</ParallaxLayer>
+				</ParallaxLayer> */}
 
-				<ParallaxLayer
+				{/* Dos imagenes laterales (3ra pag) */}
+				{/* <ParallaxLayer
 					offset={2}
 					speed={-0.3}
 					style={{
@@ -73,7 +79,7 @@ function landing() {
 						backgroundPosition: 'center',
 						backgroundImage: url('clients', true),
 					}}
-				/>
+				/> */}
 
 				<ParallaxLayer
 					offset={0}
@@ -84,7 +90,14 @@ function landing() {
 						alignItems: 'center',
 						justifyContent: 'center',
 					}}>
-					<img src={url('server')} style={{ width: '20%' }} />
+					<Stack textAlign="center">
+						<Typography variant="h4">Rewiles</Typography>
+						<Typography variant="h3">
+							Unleash your organization&apos;s potential.
+							<br />
+							Achieve greatness.
+						</Typography>
+					</Stack>
 				</ParallaxLayer>
 
 				<ParallaxLayer
@@ -96,7 +109,14 @@ function landing() {
 						alignItems: 'center',
 						justifyContent: 'center',
 					}}>
-					<img src={url('bash')} style={{ width: '40%' }} />
+					<Stack textAlign="center" maxWidth={468} gap={16}>
+						<Typography variant="h2">What we do</Typography>
+						<Typography variant="h6">
+							We believe that the key to our success is our commitment to collaboration and communication,so we work closely with our clients to understand their unique needs and goals.
+							<br />
+							We believe that the best solutions come from working together.
+						</Typography>
+					</Stack>
 				</ParallaxLayer>
 
 				<ParallaxLayer
@@ -108,7 +128,16 @@ function landing() {
 						justifyContent: 'center',
 					}}
 					onClick={() => parallax.current.scrollTo(0)}>
-					<img src={url('clients-main')} style={{ width: '40%' }} />
+					<Container maxWidth="lg">
+						<Grid container>
+							<Stack maxWidth={468} gap={8}>
+								<Typography variant="h3">We listen to you and understand your needs.</Typography>
+								<Typography variant="body1">
+									We take a customer-centric approach that focuses on understanding the customer&apos;s requirements and tailoring the product or service to meet those needs. It involves actively listening to you, gathering feedback, and analyzing your needs and preferences to create a personalized experience. This way, we can create products and services that are tailored to your specific needs.
+								</Typography>
+							</Stack>
+						</Grid>
+					</Container>
 				</ParallaxLayer>
 			</Parallax>
 		</div>
