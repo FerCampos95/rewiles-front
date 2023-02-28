@@ -10,15 +10,15 @@ function landing() {
 	return (
 		<div style={{ width: '100%', height: '100%', background: '#253237' }}>
 			<Parallax ref={parallax} pages={3}>
-				{/* <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
-				<ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} /> */}
+				<ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+				<ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
 
 				<ParallaxLayer
 					offset={0}
 					speed={0}
 					factor={3}
 					style={{
-						backgroundImage: 'linear-gradient(90deg, #6A19A4 0%, #A46A19 100%);',
+						backgroundImage: url('stars', true),
 						backgroundSize: 'cover',
 					}}
 				/>
