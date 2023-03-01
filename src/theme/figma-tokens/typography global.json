@@ -1,7 +1,7 @@
 {
   "h1": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "60px",
       "lineHeight": "70px"
@@ -10,7 +10,7 @@
   },
   "h2": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "48px",
       "lineHeight": "54px"
@@ -19,7 +19,7 @@
   },
   "h3": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "34px",
       "lineHeight": "40px"
@@ -28,7 +28,7 @@
   },
   "h4": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "24px",
       "lineHeight": "30px"
@@ -37,7 +37,7 @@
   },
   "h5": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "20px",
       "lineHeight": "26px"
@@ -46,7 +46,7 @@
   },
   "h6": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "18px",
       "lineHeight": "24px"
@@ -55,7 +55,7 @@
   },
   "Avatar Initials": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "20px",
       "lineHeight": "20px"
@@ -64,7 +64,7 @@
   },
   "subtitle1": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "18px",
       "lineHeight": "24px"
@@ -73,7 +73,7 @@
   },
   "body1": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "25px"
@@ -82,7 +82,7 @@
   },
   "Menu Item": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "24px"
@@ -91,7 +91,7 @@
   },
   "Input Text": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "24px"
@@ -100,7 +100,7 @@
   },
   "Alert Title": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "16px",
       "lineHeight": "24px"
@@ -109,7 +109,7 @@
   },
   "button": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "16px",
       "lineHeight": "22px",
@@ -120,7 +120,7 @@
   },
   "Bottom Navigation Active Label": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "24px",
@@ -130,7 +130,7 @@
   },
   "Menu Item Dense": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "24px",
@@ -140,7 +140,7 @@
   },
   "Table Header": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "15px",
       "lineHeight": "16px",
@@ -150,7 +150,7 @@
   },
   "Button Medium": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "15px",
       "lineHeight": "22px",
@@ -160,7 +160,7 @@
   },
   "Button Large": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "16px",
       "lineHeight": "26px",
@@ -170,7 +170,7 @@
   },
   "Button Small": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "14px",
       "lineHeight": "18px",
@@ -180,7 +180,7 @@
   },
   "subtitle2": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "16px",
       "lineHeight": "24px",
@@ -190,7 +190,7 @@
   },
   "body2": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "300",
       "fontSize": "16px",
       "lineHeight": "25px",
@@ -200,7 +200,7 @@
   },
   "List Subheader": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "48px",
@@ -210,7 +210,7 @@
   },
   "Chip": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "18px",
@@ -220,7 +220,7 @@
   },
   "overline": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "32px",
@@ -230,7 +230,7 @@
   },
   "caption": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "20px",
@@ -240,7 +240,7 @@
   },
   "Helper Text": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "20px",
@@ -250,7 +250,7 @@
   },
   "Badge Label": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "700",
       "fontSize": "12px",
       "lineHeight": "20px",
@@ -260,7 +260,7 @@
   },
   "Input Label": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "16px",
@@ -270,7 +270,7 @@
   },
   "Tooltip": {
     "value": {
-      "fontFamily": "Yantramanav",
+      "fontFamily": "Inter",
       "fontWeight": "400",
       "fontSize": "12px",
       "lineHeight": "16px",
