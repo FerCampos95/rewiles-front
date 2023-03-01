@@ -1,118 +1,73 @@
+import DesignOpsSVG from '@/assets/images/DesignOpsSVG';
+import DesignSVG from '@/assets/images/DesignSVG';
+import DevOpsSVG from '@/assets/images/DevOpsSVG';
+import DevSVG from '@/assets/images/DevSVG';
+import LogoSVG from '@/assets/images/LogoSVG';
+import QASVG from '@/assets/images/QASVG';
+import SecuritySVG from '@/assets/images/SecuritySVG';
 import FakeBlobSVG from '@/components/FakeBlob';
+import ParallaxSection from '@/components/ParallaxSection';
 import { Container, Grid, Stack, Typography } from '@mui/material';
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useRef } from 'react';
 
-const url = (name: string, wrap = false) =>
-	`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
+const ACTIONS_PLAN = [
+	{
+		title: 'Design',
+		description: 'Create visually appealing and/or creative elements for various purposes, with a focus on aesthetics and usability. We ensure that the product is easy to use, provides a positive experience, and solves the user\'s problem in the best possible way.',
+		img: <DesignSVG />
+	},
+	{
+		title: 'Design Ops',
+		description: 'Improve the efficiency and effectiveness of design teams by streamlining workflows, tools, and processes. We work to ensure that designers have the resources and support they need to produce high-quality work.',
+		img: <DesignOpsSVG />
+	},
+	{
+		title: 'Development',
+		description: 'We use a combination of technical skills, creativity, and problem-solving to create the digital product that you need. Our developers ensure that they are optimized for performance and user experience.',
+		img: <DevSVG />
+	},
+	{
+		title: 'Dev Ops',
+		description: 'Ensure that software is deployed and maintained smoothly, with a focus on automation and continuous improvement. Implement tools and processes that help teams work together more efficiently.We focus on improving the reliability and performance of software systems.',
+		img: <DevOpsSVG />
+	},
+	{
+		title: 'QA',
+		description: 'We use a variety of testing methods, such as manual testing, automated testing, performance testing, and security testing. These methods are used to identify any issues with the product and ensure that it meets industry standards and best practices.',
+		img: <QASVG />
+	},
+	{
+		title: 'Cybersecurity',
+		description: 'Lets protect your company and users from potential security threats, such as hackers, viruses, or malware. We ensure that your digital products are secure and reliable.',
+		img: <SecuritySVG />
+	}
+];
 
 function landing() {
 	const parallax = useRef<IParallax>(null!);
 
 	return (
 		<div style={{ width: '100%', height: '100%', background: '#0D0D0D' }}>
-			<Parallax ref={parallax} pages={4}>
-				<ParallaxLayer offset={0} speed={1} style={{ backgroundColor: '#805E73' }} />
-
-				{/* <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} /> */}
-
-				{/* STARS */}
-				{/* <ParallaxLayer
-					offset={0}
-					speed={0}
-					factor={3}
-					style={{
-						backgroundImage: url('stars', true),
-						backgroundSize: 'cover',
-					}}
-				/> */}
-				<ParallaxLayer factor={3} sticky={{ start: 1, end: 3 }}>
-					<FakeBlobSVG />
-				</ParallaxLayer>
-			
-				{/* <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-					<img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
-				</ParallaxLayer> */}
-
-				{/* CLOUDS */}
-				{/* <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+			<Parallax ref={parallax} pages={13}>
+				<ParallaxLayer factor={3} sticky={{ start: 1, end: 10 }} style={{ zIndex: -1 }}>
+					<FakeBlobSVG right='-105.67px' bottom='10.57px' />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '70%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '40%' }} />
-				</ParallaxLayer>
-
-				<ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
-					<img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
-				</ParallaxLayer>
-
-				<ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '60%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '25%', marginLeft: '30%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '80%' }} />
-				</ParallaxLayer>
-
-				<ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
-					<img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '5%' }} />
-					<img src={url('cloud')} style={{ display: 'block', width: '15%', marginLeft: '75%' }} />
-				</ParallaxLayer> */}
-
-				{/* earth 3ra pagina */}
-				{/* <ParallaxLayer
-					offset={2.5}
-					speed={-0.4}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						pointerEvents: 'none',
-					}}>
-					<img src={url('earth')} style={{ width: '60%' }} />
-				</ParallaxLayer> */}
-
-				{/* Dos imagenes laterales (3ra pag) */}
-				{/* <ParallaxLayer
-					offset={2}
-					speed={-0.3}
-					style={{
-						backgroundSize: '80%',
-						backgroundPosition: 'center',
-						backgroundImage: url('clients', true),
-					}}
-				/> */}
-
-				<ParallaxLayer
-					offset={0}
-					speed={0.1}
-					onClick={() => parallax.current.scrollTo(1)}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}>
+				<ParallaxSection pageNumber={0} parallaxRef={parallax}>
 					<Stack textAlign="center">
-						<Typography variant="h4">Rewiles</Typography>
+						<FakeBlobSVG right='25.57%' bottom='21.61%' />
+						<FakeBlobSVG left='838.95px' top='299.37px' />
+						<Typography variant="h4" paragraph>Rewiles</Typography>
 						<Typography variant="h3">
 							Unleash your organization&apos;s potential.
 							<br />
 							Achieve greatness.
 						</Typography>
 					</Stack>
-				</ParallaxLayer>
+				</ParallaxSection>
 
-				<ParallaxLayer
-					offset={1}
-					speed={0.1}
-					onClick={() => parallax.current.scrollTo(2)}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}>
+				<ParallaxSection pageNumber={1} parallaxRef={parallax}>
 					<Stack textAlign="center" maxWidth={468} gap={16}>
 						<Typography variant="h2">What we do</Typography>
 						<Typography variant="h6">
@@ -121,17 +76,9 @@ function landing() {
 							We believe that the best solutions come from working together.
 						</Typography>
 					</Stack>
-				</ParallaxLayer>
+				</ParallaxSection>
 
-				<ParallaxLayer
-					offset={2}
-					speed={-0}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}
-					onClick={() => parallax.current.scrollTo(3)}>
+				<ParallaxSection pageNumber={2} parallaxRef={parallax}>
 					<Container maxWidth="lg">
 						<Grid container>
 							<Stack maxWidth={468} gap={8}>
@@ -142,17 +89,10 @@ function landing() {
 							</Stack>
 						</Grid>
 					</Container>
-				</ParallaxLayer>
+				</ParallaxSection>
 
-				<ParallaxLayer
-					offset={3}
-					speed={-0}
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-					}}
-					onClick={() => parallax.current.scrollTo(0)}>
+
+				<ParallaxSection pageNumber={3} parallaxRef={parallax}>
 					<Container maxWidth="lg">
 						<Grid container>
 							<Stack maxWidth={468} gap={8}>
@@ -163,7 +103,109 @@ function landing() {
 							</Stack>
 						</Grid>
 					</Container>
+				</ParallaxSection>
+
+				{/* Actions Plan */}
+				<ParallaxLayer
+					factor={3}
+					sticky={{ start: 4, end: 10 }}
+					style={{
+						zIndex: -1,
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+					}}>
+					<Container maxWidth="lg">
+						<Grid container sx={{ pb: 32 }}>
+							<Stack maxWidth={468}>
+								<Typography variant="h3">
+									We create an action plan
+								</Typography>
+							</Stack>
+						</Grid>
+					</Container>
 				</ParallaxLayer>
+
+				<ParallaxSection pageNumber={4} parallaxRef={parallax}>
+					<Container maxWidth="lg">
+						<Grid container>
+							<Stack maxWidth={468}>
+								<Typography variant="body1">
+									Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
+								</Typography>
+							</Stack>
+						</Grid>
+					</Container>
+				</ParallaxSection>
+
+				{ACTIONS_PLAN.map(({ title, description, img }, index) => (
+					<ParallaxSection key={title} pageNumber={5 + index} parallaxRef={parallax}>
+						<Container maxWidth="lg">
+							<Grid container>
+								<Grid item xs={12} md={6} mt={36}>
+									<Stack maxWidth={468} gap={4}>
+										<Typography variant="h2">
+											{title}
+										</Typography>
+										<Typography variant="body1">
+											{description}
+										</Typography>
+									</Stack>
+								</Grid>
+								<Grid item xs={12} md={6}>
+									{img}
+								</Grid>
+							</Grid>
+						</Container>
+					</ParallaxSection>
+				))}
+
+				<ParallaxLayer offset={11} speed={0} style={{ backgroundColor: '#EDD4FF' }} />
+				<ParallaxSection pageNumber={11} parallaxRef={parallax}>
+					<Container maxWidth="lg">
+						<Grid container justifyContent="center">
+							<Grid
+								container
+								justifyContent="center"
+								alignItems="center"
+								sx={{ position: 'absolute', opacity: 0.2}}
+							>
+								<LogoSVG />
+							</Grid>
+							<Stack maxWidth={630} gap={4} textAlign="justify" color="#282728">
+								<Typography variant="h1" gutterBottom textAlign="center">
+									About Us
+								</Typography>
+								<Typography variant="h6">
+									Our name pays tribute to Sir Andrew Wiles, a renowned mathematician, who is best known for proving Fermat&apos;s Last Theorem in 1993.
+								</Typography>
+
+								<Typography variant="h6">
+									When he was only ten years old, Sir Wiles came to know about Fermat&apos;s Last Theorem, which awakened in him a profound fascination, since although it was so simple even he, at his young age, could comprehend it, nobody had ever been able to prove it.
+									He decided then that he would be the first person to achieve such a feat. His lack of necessary tools quickly forced him to abandon his objective; however, when he was thirty-three years old, having armed himself with knowledge and experience, he would achieve his coveted childhood dream, and he would receive the well-deserved recognition of the scientific world for his dedication and contribution to the community.
+								</Typography>
+
+								<Typography variant="h6">
+									We, the brains behind Rewiles, feel immensely inspired by Sir Wiles&apos; story of perseverance. We are creative people, eager to contribute something positive to humanity, and thanks to the knowledge and experience gained throughout our careers, we believe it is our moment to make this vision a reality.
+								</Typography>
+							</Stack>
+						</Grid>
+					</Container>
+				</ParallaxSection>
+
+				{/* <ParallaxLayer offset={12} speed={1} style={{ backgroundColor: '#EDD4FF' }} /> */}
+				<ParallaxSection pageNumber={12} parallaxRef={parallax} style={{ backgroundColor: '#EDD4FF' }}>
+					<Container maxWidth="lg">
+						<Grid container justifyContent="center">
+							<Stack maxWidth={630} gap={4} textAlign="justify" color="#282728">
+								<Typography variant="h1" gutterBottom textAlign="center" component={'h2'}>
+									Contact Us
+								</Typography>
+								FORM CONTACT
+							</Stack>
+						</Grid>
+					</Container>
+				</ParallaxSection>
 			</Parallax>
 		</div>
 	);

@@ -1,28 +1,36 @@
 import { Grid } from '@mui/material';
+import { FC } from 'react';
 
-const FakeBlobSVG = () => {
+type Props = {
+	right?: string;
+	bottom?: string;
+	left?: string;
+	top?: string;
+};
+
+const FakeBlobSVG: FC<Props> = (props) => {
 	return (
 		<Grid sx={{
 			position: 'absolute',
-			right: '-105.67px',
-			bottom: '10.57px',
+			...props,
 		}}>
-			<svg width="969" height="918" viewBox="0 0 969 918" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<g opacity="0.9" filter="url(#filter0_f_937_27454)">
-					<path fillRule="evenodd" clipRule="evenodd" d="M516.925 602.12C488.225 605.51 459.522 624.602 432.732 615.599C405.962 606.602 396.342 577.093 379.553 555.953C364.341 536.8 349.741 518.429 338.516 496.97C324.226 469.65 289.545 440.734 304.722 412.89C320.883 383.243 373.911 397.325 403.285 378.146C427.247 362.501 430.19 327.793 455.623 314.364C483.227 299.789 516.631 297.698 547.421 302.039C580.697 306.731 621.981 312.339 637.022 339.943C652.892 369.067 615.135 404.358 620.863 436.82C626.294 467.599 669.771 485.36 668.218 516.732C666.682 547.749 642.084 577.919 613.066 594.297C584.766 610.269 549.433 598.28 516.925 602.12Z" fill="url(#paint0_linear_937_27454)" />
+			<svg width="1528" height="1363" viewBox="0 0 1528 1363" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g opacity="0.9" filter="url(#filter0_f_937_27440)">
+					<path fillRule="evenodd" clipRule="evenodd" d="M739.077 526.864C779.941 524.289 823.262 504.91 859.508 515.53C895.728 526.142 904.642 558.078 924.94 581.321C943.33 602.379 960.982 622.576 973.409 645.957C989.229 675.721 1033.46 707.942 1007.78 737.186C980.441 768.324 908.112 751.304 863.835 770.751C827.716 786.616 818.162 823.655 780.323 837.093C739.252 851.679 691.978 852.691 649.382 846.913C603.346 840.669 546.2 833.151 529.369 803.055C511.61 771.3 570.184 734.916 567.2 699.963C564.371 666.821 506.038 646.215 513.117 612.695C520.116 579.556 559.396 548.168 602.736 531.705C645.001 515.65 692.79 529.779 739.077 526.864Z" fill="url(#paint0_linear_937_27440)"/>
 				</g>
 				<defs>
-					<filter id="filter0_f_937_27454" x="0.958038" y="0.0316162" width="967.3" height="917.957" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-						<feFlood floodOpacity="0" result="BackgroundImageFix" />
-						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-						<feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_937_27454" />
+					<filter id="filter0_f_937_27440" x="0.521896" y="0.374741" width="1527.1" height="1361.82" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+						<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+						<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+						<feGaussianBlur stdDeviation="256" result="effect1_foregroundBlur_937_27440"/>
 					</filter>
-					<linearGradient id="paint0_linear_937_27454" x1="657.003" y1="427.387" x2="315.676" y2="500.101" gradientUnits="userSpaceOnUse">
-						<stop stopColor="#6A19A4" />
-						<stop offset="1" stopColor="#A46A19" />
+					<linearGradient id="paint0_linear_937_27440" x1="514.934" y1="708.731" x2="1006" y2="643.444" gradientUnits="userSpaceOnUse">
+						<stop stopColor="#6A19A4"/>
+						<stop offset="1" stopColor="#A46A19"/>
 					</linearGradient>
 				</defs>
 			</svg>
+
 		</Grid>
 	);
 };
