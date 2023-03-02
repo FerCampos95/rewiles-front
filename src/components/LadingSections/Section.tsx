@@ -15,6 +15,7 @@ const Section: FC<Props> = ({ children, id }) => {
 			justifyContent="center"
 			position="relative"
 			width="100%"
+			p={4}
 		>
 			<Container maxWidth="lg">
 				{children}

@@ -31,7 +31,27 @@ export default function Footer() {
 			}}
 		>
 			<Container maxWidth="lg">
-				<Grid container justifyContent="space-between" alignItems="center" height={100}>
+				<Grid
+					container
+					justifyContent="space-between"
+					alignItems="center"
+					height={100}
+				>
+					<Grid
+						container
+						gap={2}
+						alignItems="center"
+						justifyContent="center"
+						mb={4}
+						sx={{ display: { md: 'none', xs: 'flex' }}}
+					>
+						<Typography variant="subtitle1">
+								Contact
+						</Typography>
+						<Typography variant="subtitle1">
+								info@rewiles.com
+						</Typography>
+					</Grid>
 					<Grid item>
 						<Grid container alignItems="center" gap={2}>
 							<LogoSVG width="30" />
@@ -41,7 +61,7 @@ export default function Footer() {
 						</Grid>
 						<Copyright />
 					</Grid>
-					<Grid item>
+					<Grid item sx={{ display: { md: 'block', xs: 'none' }}}>
 						<Typography variant="subtitle1">
 							Contact
 						</Typography>
