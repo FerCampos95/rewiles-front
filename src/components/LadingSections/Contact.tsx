@@ -1,5 +1,4 @@
 import { Grid, Stack, Typography } from '@mui/material';
-import LogoSVG from '@/assets/images/LogoSVG';
 
 const Contact = () => {
 	return (

@@ -1,19 +1,21 @@
-import { Grid, Typography } from '@mui/material';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { Grid, Typography, Stack } from '@mui/material';
 import { IHomeWordings, en, es } from '@/locales';
 import Layout from '@/components/Layout';
 import Section from '@/components/LadingSections/Section';
-import { Stack } from '@mui/material';
+import AboutUs from '@/components/LadingSections/AboutUs';
+import Contact from '@/components/LadingSections/Contact';
+
 import DesignSVG from '@/assets/images/DesignSVG';
 import DesignOpsSVG from '@/assets/images/DesignOpsSVG';
 import DevSVG from '@/assets/images/DevSVG';
 import DevOpsSVG from '@/assets/images/DevOpsSVG';
 import QASVG from '@/assets/images/QASVG';
 import SecuritySVG from '@/assets/images/SecuritySVG';
-import AboutUs from '@/components/LadingSections/AboutUs';
+
 import FakeBlobSVG from '@/components/FakeBlob';
 import RightBlob from '@/assets/blobs/RigthBlob';
-import Contact from '@/components/LadingSections/Contact';
+
 
 const ACTIONS_PLAN = [
 	{
