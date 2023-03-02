@@ -1,15 +1,16 @@
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { Grid } from '@mui/material';
+import LogoSVG from '@/assets/images/LogoSVG';
 
 function Copyright() {
 	return (
-		<Typography variant="body2" color="text.secondary">
+		<Typography variant="body2">
 			{'Copyright © '}
 			<Link color="inherit" href="https://rewiles.com">
-        Rewiles
+				Rewiles
 			</Link>{' '}
 			{new Date().getFullYear()}
 			. All Rights Reserved.
@@ -25,26 +26,27 @@ export default function Footer() {
 				py: 3,
 				px: 2,
 				mt: 'auto',
-				/* backgroundColor: (theme) =>
-          theme.palette.mode === 'light'
-            ? theme.palette.grey[200]
-            : theme.palette.grey[800], */
+				bgcolor: '#EDD4FF',
+				color: '#0D0D0D'
 			}}
 		>
 			<Container maxWidth="lg">
-				<Grid container justifyContent="space-between">
+				<Grid container justifyContent="space-between" alignItems="center" height={100}>
 					<Grid item>
-						<Typography variant="body1">
-              Rewiles.
-						</Typography>
+						<Grid container alignItems="center" gap={2}>
+							<LogoSVG width="30" />
+							<Typography variant="body1" fontSize={40}>
+								Rewiles
+							</Typography>
+						</Grid>
 						<Copyright />
 					</Grid>
 					<Grid item>
 						<Typography variant="subtitle1">
-              Contact
+							Contact
 						</Typography>
 						<Typography variant="body1">
-              info@rewiles.com
+							info@rewiles.com
 						</Typography>
 					</Grid>
 				</Grid>

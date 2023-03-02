@@ -22,7 +22,6 @@ export default function GlobalStyles() {
 				body: {
 					minHeight: '100vh',
 					height: '100%',
-					width: '100vw',
 					padding: '0',
 					margin: '0',
 				},
