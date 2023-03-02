@@ -71,7 +71,7 @@ const Home: NextPage<Props> = ({ wordings }) => {
 				</Typography>
 			</Section>
 
-			<Section>
+			<Section id="what-we-do">
 				<Stack maxWidth={468} gap={16} textAlign="center">
 					<Typography variant="h2">
 						What we do

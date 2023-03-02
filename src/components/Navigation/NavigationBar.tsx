@@ -1,18 +1,30 @@
 import * as React from 'react';
+import Link from 'next/link';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import LogoSVG from '@/assets/images/LogoSVG';
 import { Grid, MenuList } from '@mui/material';
+import { ListItem } from '@mui/material';
 
-const pages = ['What we do', 'About Us', 'Contact', 'Careers'];
+const pages = [{
+	label: 'What we do',
+	link: '#what-we-do',
+}, {
+	label: 'About Us',
+	link: '#about-us',
+}, {
+	label: 'Contact',
+	link: '#contact'
+}, {
+	label: 'Careers',
+	link: '#careers'
+}];
 
 function NavigationBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -26,7 +38,7 @@ function NavigationBar() {
 	};
 
 	return (
-		<AppBar position="static" component="nav">
+		<AppBar position="fixed" component="nav">
 			<Container maxWidth="xl">
 				<Toolbar>
 					<Box sx={{ mr: 1, display: 'flex', alignItems: 'center' }}>
@@ -41,14 +53,18 @@ function NavigationBar() {
 							justifyContent: 'center',
 						}}
 					>
-						{pages.map((page) => (
+						{pages.map(({label, link}) => (
 							<Button
-								key={page}
+								key={link}
 								variant='text'
+								component={Link}
+								href={link}
+								LinkComponent={Link}
+								scroll={false}
 								onClick={handleCloseNavMenu}
 								sx={{ my: 2, color: 'white', display: 'block' }}
 							>
-								{page}
+								{label}
 							</Button>
 						))}
 					</Grid>
@@ -79,12 +95,22 @@ function NavigationBar() {
 							}}
 						>
 							<MenuList sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-								{pages.map((page) => (
-									<MenuItem key={page} onClick={handleCloseNavMenu}>
-										<Typography textAlign="center">
-											{page}
-										</Typography>
-									</MenuItem>
+								{pages.map(({label, link}) => (
+									<ListItem key={link} onClick={handleCloseNavMenu} dense>
+										<Button
+											fullWidth
+											key={link}
+											variant='text'
+											component={Link}
+											href={link}
+											LinkComponent={Link}
+											scroll={false}
+											onClick={handleCloseNavMenu}
+											sx={{ color: 'white' }}
+										>
+											{label}
+										</Button>
+									</ListItem>
 								))}
 							</MenuList>
 						</Menu>

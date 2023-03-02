@@ -3,11 +3,13 @@ import { Container, Stack } from '@mui/material';
 
 type Props = {
   children: ReactNode;
+	id?: string;
 };
 
-const Section: FC<Props> = ({ children }) => {
+const Section: FC<Props> = ({ children, id }) => {
 	return (
 		<Stack
+			id={id}
 			height="100vh"
 			alignItems="center"
 			justifyContent="center"

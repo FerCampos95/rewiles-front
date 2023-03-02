@@ -3,6 +3,7 @@ import { Grid, Stack, Typography } from '@mui/material';
 const Contact = () => {
 	return (
 		<Stack
+			id="contact"
 			height="100vh"
 			alignItems="center"
 			justifyContent="center"

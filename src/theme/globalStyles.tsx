@@ -18,6 +18,7 @@ export default function GlobalStyles() {
 					width: '100%',
 					height: '100%',
 					WebkitOverflowScrolling: 'touch',
+					scrollBehavior: 'smooth',
 				},
 				body: {
 					minHeight: '100vh',

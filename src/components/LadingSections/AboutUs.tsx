@@ -4,6 +4,7 @@ import LogoSVG from '@/assets/images/LogoSVG';
 const AboutUs = () => {
 	return (
 		<Stack
+			id="about-us"
 			height="100vh"
 			alignItems="center"
 			justifyContent="center"
