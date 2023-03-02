@@ -59,8 +59,8 @@ const Home: NextPage<Props> = ({ wordings }) => {
 	return (
 		<Layout>
 			<Section>
-				<FakeBlobSVG right='25.57%' bottom='21.61%' />
-				<FakeBlobSVG left='15%' top='10%' />
+				{/* <FakeBlobSVG right='25.57%' bottom='21.61%' />
+				<FakeBlobSVG left='15%' top='10%' /> */}
 				<Typography variant="h4" paragraph component="h1" textAlign="center">
 					Rewiles
 				</Typography>
@@ -95,7 +95,7 @@ const Home: NextPage<Props> = ({ wordings }) => {
 						</Typography>
 					</Stack>
 				</Grid>
-				<RightBlob left='40%' bottom='1rem' />
+				{/* <RightBlob left='40%' bottom='1rem' /> */}
 			</Section>
 
 			<Section>
@@ -140,7 +140,7 @@ const Home: NextPage<Props> = ({ wordings }) => {
 								</Typography>
 							</Stack>
 						</Grid>
-						<Grid item xs={12} md={6}>
+						<Grid item md={6} sx={{ display: { xs: 'none' }}}>
 							{img}
 						</Grid>
 					</Grid>
