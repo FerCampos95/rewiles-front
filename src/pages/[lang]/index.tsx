@@ -13,8 +13,7 @@ import DevOpsSVG from '@/assets/images/DevOpsSVG';
 import QASVG from '@/assets/images/QASVG';
 import SecuritySVG from '@/assets/images/SecuritySVG';
 
-import FakeBlobSVG from '@/components/FakeBlob';
-import RightBlob from '@/assets/blobs/RigthBlob';
+import Blob1 from '@/assets/blobs/Blob1';
 
 
 const ACTIONS_PLAN = [
@@ -58,6 +57,9 @@ type Props = {
 const Home: NextPage<Props> = ({ wordings }) => {
 	return (
 		<Layout>
+			<Blob1 top='30%' right='2%' width='50%' />
+			<Blob1 top='1%' left='2%' width='50%' />
+
 			<Section>
 				{/* <FakeBlobSVG right='25.57%' bottom='21.61%' />
 				<FakeBlobSVG left='15%' top='10%' /> */}
@@ -85,6 +87,8 @@ const Home: NextPage<Props> = ({ wordings }) => {
 			</Section>
 
 			<Section>
+				<Blob1 right='10%' top='10%' style={{ position: 'fixed' }}/>
+
 				<Grid container>
 					<Stack maxWidth={468} gap={8}>
 						<Typography variant="h3">
@@ -95,7 +99,6 @@ const Home: NextPage<Props> = ({ wordings }) => {
 						</Typography>
 					</Stack>
 				</Grid>
-				{/* <RightBlob left='40%' bottom='1rem' /> */}
 			</Section>
 
 			<Section>
