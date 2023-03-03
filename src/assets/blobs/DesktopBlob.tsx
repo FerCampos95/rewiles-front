@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material';
 import { CSSProperties, FC } from 'react';
 
 type Props = {
@@ -9,9 +10,10 @@ type Props = {
   bottom?: string;
 }
 
-const Blob1: FC<Props> = (props) => {
+const DesktopBlob: FC<Props> = (props) => {
 	return (
-		<div className="blob" style={{
+		<Grid sx={{
+			display: { xs: 'none', md: 'block' },
 			position: 'absolute',
 			filter: 'blur(100px)',
 			opacity: '0.3',
@@ -30,7 +32,7 @@ const Blob1: FC<Props> = (props) => {
 					<animate attributeName="d"
 						dur="5000ms"
 						repeatCount="indefinite"
-            
+
 						values="M344,251Q309,262,302.5,271.5Q296,281,331,347Q366,413,338.5,435Q311,457,275.5,397.5Q240,338,205,397Q170,456,139,438.5Q108,421,139.5,355.5Q171,290,91.5,302Q12,314,39.5,277Q67,240,88,218.5Q109,197,103.5,167Q98,137,149.5,162Q201,187,190,119.5Q179,52,209.5,32.5Q240,13,248.5,100.5Q257,188,302.5,140Q348,92,315.5,150.5Q283,209,355.5,194Q428,179,403.5,209.5Q379,240,344,251Z;
             
             M366,262.5Q377,285,368,306Q359,327,316,306Q273,285,285.5,351.5Q298,418,269,417.5Q240,417,217,399Q194,381,160.5,388Q127,395,121,363Q115,331,127,302Q139,273,138.5,256.5Q138,240,109,214Q80,188,89.5,163Q99,138,130.5,135.5Q162,133,180.5,124Q199,115,219.5,81.5Q240,48,271.5,46.5Q303,45,305.5,96Q308,147,348.5,139.5Q389,132,412.5,154Q436,176,395.5,208Q355,240,366,262.5Z;
@@ -41,8 +43,8 @@ const Blob1: FC<Props> = (props) => {
 					</animate>
 				</path>
 			</svg>
-		</div>
+		</Grid>
 	);
 };
 
-export default Blob1;
+export default DesktopBlob;

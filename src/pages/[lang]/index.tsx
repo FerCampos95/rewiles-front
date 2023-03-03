@@ -13,7 +13,7 @@ import DevOpsSVG from '@/assets/images/DevOpsSVG';
 import QASVG from '@/assets/images/QASVG';
 import SecuritySVG from '@/assets/images/SecuritySVG';
 
-import Blob1 from '@/assets/blobs/Blob1';
+import DesktopBlob from '@/assets/blobs/DesktopBlob';
 
 
 const ACTIONS_PLAN = [
@@ -57,12 +57,10 @@ type Props = {
 const Home: NextPage<Props> = ({ wordings }) => {
 	return (
 		<Layout>
-			<Blob1 top='30%' right='2%' width='50%' />
-			<Blob1 top='1%' left='2%' width='50%' />
+			<DesktopBlob top='0' left='1vw' width='50vw' />
+			<DesktopBlob bottom='0' right='2vw' width='50vw' />
 
 			<Section>
-				{/* <FakeBlobSVG right='25.57%' bottom='21.61%' />
-				<FakeBlobSVG left='15%' top='10%' /> */}
 				<Typography variant="h4" paragraph component="h1" textAlign="center">
 					Rewiles
 				</Typography>
@@ -87,8 +85,6 @@ const Home: NextPage<Props> = ({ wordings }) => {
 			</Section>
 
 			<Section>
-				<Blob1 right='10%' top='10%' style={{ position: 'fixed' }}/>
-
 				<Grid container>
 					<Stack maxWidth={468} gap={8}>
 						<Typography variant="h3">
@@ -114,41 +110,44 @@ const Home: NextPage<Props> = ({ wordings }) => {
 				</Grid>
 			</Section>
 
-			<Section>
-				<Grid container>
-					<Stack maxWidth={468} gap={8}>
-						<Typography variant="h3">
+			<Stack>
+				<DesktopBlob left='50vw' top='20vh' style={{ position: 'sticky', height: '0px' }}/>
+				<Section>
+					<Grid container>
+						<Stack maxWidth={468} gap={8}>
+							<Typography variant="h3">
 							We create an action plan
-						</Typography>
-						<Typography variant="body1">
+							</Typography>
+							<Typography variant="body1">
 							Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
-						</Typography>
-					</Stack>
-				</Grid>
-			</Section>
-
-			{ACTIONS_PLAN.map(({ title, description, img }) => (
-				<Section key={title}>
-					<Grid container alignItems="center">
-						<Grid item xs={12} md={6}>
-							<Stack maxWidth={468} gap={4}>
-								<Typography variant="h3">
-									We create an action plan
-								</Typography>
-								<Typography variant="h2" component="h4">
-									{title}
-								</Typography>
-								<Typography variant="body1">
-									{description}
-								</Typography>
-							</Stack>
-						</Grid>
-						<Grid item md={6} sx={{ display: { xs: 'none' }}}>
-							{img}
-						</Grid>
+							</Typography>
+						</Stack>
 					</Grid>
 				</Section>
-			))}
+
+				{ACTIONS_PLAN.map(({ title, description, img }) => (
+					<Section key={title}>
+						<Grid container alignItems="center">
+							<Grid item xs={12} md={6}>
+								<Stack maxWidth={468} gap={4}>
+									<Typography variant="h3">
+									We create an action plan
+									</Typography>
+									<Typography variant="h2" component="h4">
+										{title}
+									</Typography>
+									<Typography variant="body1">
+										{description}
+									</Typography>
+								</Stack>
+							</Grid>
+							<Grid item md={6} sx={{ display: { xs: 'none', md: 'flex' }}}>
+								{img}
+							</Grid>
+						</Grid>
+					</Section>
+				))}
+			</Stack>
 
 			<AboutUs />
 			<Contact />
