@@ -50,7 +50,7 @@ function NavigationBar() {
 						gap={4}
 						sx={{
 							display: { xs: 'none', md: 'flex' },
-							justifyContent: 'center',
+							justifyContent: 'space-evenly',
 						}}
 					>
 						{pages.map(({label, link}) => (

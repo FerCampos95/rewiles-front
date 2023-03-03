@@ -1,7 +1,5 @@
-// separar navegacion en desktop
-// armar form
+// definir colores colores en textos
 // funcionalidad form
-// colores en textos
 
 
 // MOBILE

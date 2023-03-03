@@ -84,34 +84,35 @@ const Home: NextPage<Props> = ({ wordings }) => {
 				</Stack>
 			</Section>
 
-			<Section>
-				<Grid container>
-					<Stack maxWidth={468} gap={8}>
-						<Typography variant="h3">
-							We listen to you and understand your needs.
-						</Typography>
-						<Typography variant="body1">
-							We take a customer-centric approach that focuses on understanding the customer&apos;s requirements and tailoring the product or service to meet those needs. It involves actively listening to you, gathering feedback, and analyzing your needs and preferences to create a personalized experience. This way, we can create products and services that are tailored to your specific needs.
-						</Typography>
-					</Stack>
-				</Grid>
-			</Section>
-
-			<Section>
-				<Grid container>
-					<Stack maxWidth={468} gap={8}>
-						<Typography variant="h3">
-							We analyze and relieve the information we find
-						</Typography>
-						<Typography variant="body1">
-							We take a data-driven approach that involves gathering and analyzing information to identify patterns, trends, and insights. This way, we gain a deeper understanding of your customers, market trends, and industry performance. By analyzing data, we can identify areas for improvement, opportunities for growth, and potential risks. We can use this information to make informed decisions and take strategic action to achieve your goals.
-						</Typography>
-					</Stack>
-				</Grid>
-			</Section>
-
 			<Stack>
 				<DesktopBlob left='50vw' top='20vh' style={{ position: 'sticky', height: '0px' }}/>
+				<Section>
+					<Grid container>
+						<Stack maxWidth={468} gap={8}>
+							<Typography variant="h3">
+							We listen to you and understand your needs.
+							</Typography>
+							<Typography variant="body1">
+							We take a customer-centric approach that focuses on understanding the customer&apos;s requirements and tailoring the product or service to meet those needs. It involves actively listening to you, gathering feedback, and analyzing your needs and preferences to create a personalized experience. This way, we can create products and services that are tailored to your specific needs.
+							</Typography>
+						</Stack>
+					</Grid>
+				</Section>
+
+				<Section>
+					<Grid container>
+						<Stack maxWidth={468} gap={8}>
+							<Typography variant="h3">
+							We analyze and relieve the information we find
+							</Typography>
+							<Typography variant="body1">
+							We take a data-driven approach that involves gathering and analyzing information to identify patterns, trends, and insights. This way, we gain a deeper understanding of your customers, market trends, and industry performance. By analyzing data, we can identify areas for improvement, opportunities for growth, and potential risks. We can use this information to make informed decisions and take strategic action to achieve your goals.
+							</Typography>
+						</Stack>
+					</Grid>
+				</Section>
+
+			
 				<Section>
 					<Grid container>
 						<Stack maxWidth={468} gap={8}>
