@@ -14,61 +14,79 @@ import QASVG from '@/assets/images/QASVG';
 import SecuritySVG from '@/assets/images/SecuritySVG';
 
 import DesktopBlob from '@/assets/blobs/DesktopBlob';
+import { onlyDesktop, onlyMobile } from '@/utils/hidden';
+import useDevice from '@/hooks/utils/useDevice';
+import DesignIcon from '@/assets/icons/DesignIcon';
+import DesignOpsIcon from '@/assets/icons/DesignOpsIcon';
+import DevIcon from '@/assets/icons/DevIcon';
+import DevOpsIcon from '@/assets/icons/DevOpsIcon';
+import QAIcon from '@/assets/icons/QAIcon';
+import SecurityIcon from '@/assets/icons/SecurityIcon';
 
 
 const ACTIONS_PLAN = [
 	{
 		title: 'Design',
 		description: 'Create visually appealing and/or creative elements for various purposes, with a focus on aesthetics and usability. We ensure that the product is easy to use, provides a positive experience, and solves the user\'s problem in the best possible way.',
-		img: <DesignSVG />
+		img: <DesignSVG />,
+		icon: <DesignIcon />
 	},
 	{
 		title: 'Design Ops',
 		description: 'Improve the efficiency and effectiveness of design teams by streamlining workflows, tools, and processes. We work to ensure that designers have the resources and support they need to produce high-quality work.',
-		img: <DesignOpsSVG />
+		img: <DesignOpsSVG />,
+		icon: <DesignOpsIcon />
 	},
 	{
 		title: 'Development',
 		description: 'We use a combination of technical skills, creativity, and problem-solving to create the digital product that you need. Our developers ensure that they are optimized for performance and user experience.',
-		img: <DevSVG />
+		img: <DevSVG />,
+		icon: <DevIcon />
 	},
 	{
 		title: 'Dev Ops',
 		description: 'Ensure that software is deployed and maintained smoothly, with a focus on automation and continuous improvement. Implement tools and processes that help teams work together more efficiently.We focus on improving the reliability and performance of software systems.',
-		img: <DevOpsSVG />
+		img: <DevOpsSVG />,
+		icon: <DevOpsIcon />
 	},
 	{
 		title: 'QA',
 		description: 'We use a variety of testing methods, such as manual testing, automated testing, performance testing, and security testing. These methods are used to identify any issues with the product and ensure that it meets industry standards and best practices.',
-		img: <QASVG />
+		img: <QASVG />,
+		icon: <QAIcon />
 	},
 	{
 		title: 'Cybersecurity',
 		description: 'Lets protect your company and users from potential security threats, such as hackers, viruses, or malware. We ensure that your digital products are secure and reliable.',
-		img: <SecuritySVG />
+		img: <SecuritySVG />,
+		icon: <SecurityIcon />
 	}
 ];
 
 type Props = {
 	wordings: IHomeWordings
-}
+};
 
 // eslint-disable-next-line react/prop-types
 const Home: NextPage<Props> = ({ wordings }) => {
+	const { isMobile } = useDevice();
+
 	return (
 		<Layout>
 			<DesktopBlob top='0' left='1vw' width='50vw' />
 			<DesktopBlob bottom='0' right='2vw' width='50vw' />
 
 			<Section>
-				<Typography variant="h4" paragraph component="h1" textAlign="center">
-					Rewiles
-				</Typography>
-				<Typography variant="h3" textAlign="center">
-					Unleash your organization&apos;s potential.
-					<br />
-					Achieve greatness.
-				</Typography>
+				<Stack>
+					<Typography variant="h4" paragraph component="h1" textAlign="center">
+						Rewiles
+					</Typography>
+					<Typography variant="h3" textAlign="center">
+						Unleash your organization&apos;s potential.
+						<br />
+						Achieve greatness.
+					</Typography>
+				</Stack>
 			</Section>
 
 			<Section id="what-we-do">
@@ -85,15 +103,15 @@ const Home: NextPage<Props> = ({ wordings }) => {
 			</Section>
 
 			<Stack>
-				<DesktopBlob left='50vw' top='20vh' style={{ position: 'sticky', height: '0px' }}/>
+				<DesktopBlob left='40vw' top='0' width='50vw' style={{ position: 'sticky', height: '0px' }} />
 				<Section>
 					<Grid container>
 						<Stack maxWidth={468} gap={8}>
 							<Typography variant="h3">
-							We listen to you and understand your needs.
+								We listen to you and understand your needs.
 							</Typography>
 							<Typography variant="body1">
-							We take a customer-centric approach that focuses on understanding the customer&apos;s requirements and tailoring the product or service to meet those needs. It involves actively listening to you, gathering feedback, and analyzing your needs and preferences to create a personalized experience. This way, we can create products and services that are tailored to your specific needs.
+								We take a customer-centric approach that focuses on understanding the customer&apos;s requirements and tailoring the product or service to meet those needs. It involves actively listening to you, gathering feedback, and analyzing your needs and preferences to create a personalized experience. This way, we can create products and services that are tailored to your specific needs.
 							</Typography>
 						</Stack>
 					</Grid>
@@ -103,55 +121,84 @@ const Home: NextPage<Props> = ({ wordings }) => {
 					<Grid container>
 						<Stack maxWidth={468} gap={8}>
 							<Typography variant="h3">
-							We analyze and relieve the information we find
+								We analyze and relieve the information we find
 							</Typography>
 							<Typography variant="body1">
-							We take a data-driven approach that involves gathering and analyzing information to identify patterns, trends, and insights. This way, we gain a deeper understanding of your customers, market trends, and industry performance. By analyzing data, we can identify areas for improvement, opportunities for growth, and potential risks. We can use this information to make informed decisions and take strategic action to achieve your goals.
+								We take a data-driven approach that involves gathering and analyzing information to identify patterns, trends, and insights. This way, we gain a deeper understanding of your customers, market trends, and industry performance. By analyzing data, we can identify areas for improvement, opportunities for growth, and potential risks. We can use this information to make informed decisions and take strategic action to achieve your goals.
 							</Typography>
 						</Stack>
 					</Grid>
 				</Section>
 
-			
-				<Section>
-					<Grid container>
-						<Stack maxWidth={468} gap={8}>
-							<Typography variant="h3">
+				<Stack>
+					<Grid sx={{
+						...onlyMobile,
+						zIndex: 1,
+						pt: 6,
+						px: 6,
+						position: 'sticky',
+						top: 50
+					}}>
+						<Typography variant="h3">
 							We create an action plan
-							</Typography>
-							<Typography variant="body1">
-							Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
-							</Typography>
-						</Stack>
+						</Typography>
 					</Grid>
-				</Section>
+					<Grid sx={{ px: 4, ...onlyMobile }}>
+						<Typography sx={{ pl: 4, borderLeft: 'solid 4px blue' }} variant="body1">
+							Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
+						</Typography>
+					</Grid>
 
-				{ACTIONS_PLAN.map(({ title, description, img }) => (
-					<Section key={title}>
-						<Grid container alignItems="center">
-							<Grid item xs={12} md={6}>
-								<Stack maxWidth={468} gap={4}>
-									<Typography variant="h3">
+					<Section sx={{ ...onlyDesktop }}>
+						<Grid container>
+							<Stack maxWidth={468} gap={8}>
+								<Typography variant="h3">
 									We create an action plan
-									</Typography>
-									<Typography variant="h2" component="h4">
-										{title}
-									</Typography>
-									<Typography variant="body1">
-										{description}
-									</Typography>
-								</Stack>
-							</Grid>
-							<Grid item md={6} sx={{ display: { xs: 'none', md: 'flex' }}}>
-								{img}
-							</Grid>
+								</Typography>
+								<Typography variant="body1">
+									Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
+								</Typography>
+							</Stack>
 						</Grid>
 					</Section>
-				))}
+
+					{ACTIONS_PLAN.map(({ title, description, img, icon }) => (
+						<Section key={title} withBorder>
+							<Grid container alignItems="center">
+								<Grid item xs={12} md={6}>
+									<Stack maxWidth={468} gap={4} sx={{ pl: { xs: 4 } }}>
+										<Typography variant="h3" sx={{ ...onlyDesktop }}>
+											We create an action plan
+										</Typography>
+
+										<Grid container gap={2} alignItems="center" sx={{ ...onlyMobile }}>
+											{icon}
+											<Typography variant="h2" component="h3">
+												{title}
+											</Typography>
+										</Grid>
+
+										<Typography variant="h2" component="h2" sx={{ ...onlyDesktop }}>
+											{title}
+										</Typography>
+										<Typography variant="body1">
+											{description}
+										</Typography>
+									</Stack>
+								</Grid>
+								<Grid item md={6} sx={{ ...onlyDesktop }}>
+									{img}
+								</Grid>
+							</Grid>
+						</Section>
+					))}
+				</Stack>
 			</Stack>
 
-			<AboutUs />
-			<Contact />
+			<Grid>
+				<AboutUs />
+				<Contact />
+			</Grid>
 		</Layout>
 	);
 };

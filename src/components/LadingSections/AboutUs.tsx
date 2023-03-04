@@ -26,7 +26,7 @@ const AboutUs = () => {
             About Us
 					</Typography>
 					<Typography variant="h6">
-            Our name pays tribute to Sir Andrew Wiles, a renowned mathematician, who is best known for proving Fermat&apos;s Last Theorem in 1993.
+            Our name pays tribute to <strong>Sir Andrew Wiles</strong>, a renowned mathematician, who is best known for proving Fermat&apos;s Last Theorem in 1993.
 					</Typography>
 
 					<Typography variant="h6">
@@ -35,7 +35,7 @@ const AboutUs = () => {
 					</Typography>
 
 					<Typography variant="h6">
-            We, the brains behind Rewiles, feel immensely inspired by Sir Wiles&apos; story of perseverance. We are creative people, eager to contribute something positive to humanity, and thanks to the knowledge and experience gained throughout our careers, we believe it is our moment to make this vision a reality.
+            We, the brains behind Rewiles, feel immensely inspired by Sir Wiles&apos; story of perseverance. We are <strong>creative people</strong>, eager to contribute something <b>positive to humanity</b>, and thanks to the <strong>knowledge and experience</strong> gained throughout our careers, we believe it <b>is our moment</b> to make this vision a reality.
 					</Typography>
 				</Stack>
 			</Grid>
