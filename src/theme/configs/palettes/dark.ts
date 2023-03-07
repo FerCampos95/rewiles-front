@@ -2,8 +2,12 @@ import figmaColors from '../../figma-tokens/color global.json';
 
 export const colors = figmaColors['Color Global'];
 
-export function createGradient(color1: string, color2: string) {
+export function createGradientBottom(color1: string, color2: string) {
 	return `linear-gradient(to bottom, ${color1}, ${color2})`;
+}
+
+export function createGradientRight(color1: string, color2: string) {
+	return `linear-gradient(to right, ${color1}, ${color2})`;
 }
 
 // SETUP DARK COLORS
@@ -80,11 +84,11 @@ const GREY = {
 };
 
 const GRADIENTS = {
-	primary: createGradient(PRIMARY.light, PRIMARY.main),
-	info: createGradient(INFO.light, INFO.main),
-	success: createGradient(SUCCESS.light, SUCCESS.main),
-	warning: createGradient(WARNING.light, WARNING.main),
-	error: createGradient(ERROR.light, ERROR.main),
+	primary: createGradientBottom(SECONDARY.main, PRIMARY.main),
+	secondary: createGradientRight(SECONDARY.main, PRIMARY.main),
+	success: createGradientBottom(SUCCESS.light, SUCCESS.main),
+	warning: createGradientBottom(WARNING.light, WARNING.main),
+	error: createGradientBottom(ERROR.light, ERROR.main),
 };
 
 // TODO define

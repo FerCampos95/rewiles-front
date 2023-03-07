@@ -1,4 +1,4 @@
-import { ChartPaletteOptions, GradientsPaletteOptions } from '../palette';
+import { ChartPaletteOptions, GradientsPaletteOptions } from '../configs/palette';
 import { CustomShadowOptions } from '../shadows';
 
 // palette

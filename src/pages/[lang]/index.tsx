@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { Grid, Typography, Stack } from '@mui/material';
+import { Grid, Typography, Stack, useTheme } from '@mui/material';
 import { IHomeWordings, en, es } from '@/locales';
 import Layout from '@/components/Layout';
 import Section from '@/components/LadingSections/Section';
@@ -70,6 +70,7 @@ type Props = {
 // eslint-disable-next-line react/prop-types
 const Home: NextPage<Props> = ({ wordings }) => {
 	const { isMobile } = useDevice();
+	const theme = useTheme();
 
 	return (
 		<Layout>
@@ -81,11 +82,35 @@ const Home: NextPage<Props> = ({ wordings }) => {
 					<Typography variant="h4" paragraph component="h1" textAlign="center">
 						Rewiles
 					</Typography>
-					<Typography variant="h3" textAlign="center">
-						Unleash your organization&apos;s potential.
-						<br />
-						Achieve greatness.
-					</Typography>
+					<Grid container justifyContent="center">
+						<Typography variant="h3" >
+							Unleash your organization&apos;s&nbsp;
+						</Typography>
+						<Typography
+							variant="h3"
+							textAlign="center"
+							sx={{
+								background: theme.palette.gradients.primary,
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}
+						>
+							potential.
+						</Typography>
+					</Grid>
+					<Grid container justifyContent="center">
+						<Typography variant="h3" textAlign="center">
+							Achieve&nbsp;
+						</Typography>
+						<Typography variant="h3" textAlign="center"
+							sx={{
+								background: theme.palette.gradients.primary,
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}>
+							greatness.
+						</Typography>
+					</Grid>
 				</Stack>
 			</Section>
 
