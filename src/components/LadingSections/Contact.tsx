@@ -1,7 +1,9 @@
 import DesktopBlob from '@/assets/blobs/DesktopBlob';
-import { Button, Grid, Stack, TextField, Typography } from '@mui/material';
+import { Button, Grid, Stack, TextField, Typography, useTheme } from '@mui/material';
 
 const Contact = () => {
+	const theme = useTheme();
+
 	return (
 		<Stack
 			id="contact"
@@ -14,7 +16,7 @@ const Contact = () => {
 			p={4}
 		>
 			<DesktopBlob right='0' bottom='0' width="50vw" style={{ position: 'absolute' }}/>
-			<Grid container justifyContent="center" color="#282728">
+			<Grid container justifyContent="center">
 				<Grid container maxWidth={630} spacing={4}>
 					<Grid item xs={12}>
 						<Typography variant="h1" gutterBottom textAlign="center" component={'h2'}>
@@ -50,8 +52,10 @@ const Contact = () => {
 					</Grid>
 
 					<Grid container justifyContent="center" mt={18}>
-						<Button type='submit'>
-						Submit
+						<Button type='submit' sx={{
+							background: theme.palette.gradients.secondary,
+						}}>
+							Submit
 						</Button>
 					</Grid>
 				</Grid>

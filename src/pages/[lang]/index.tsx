@@ -74,8 +74,8 @@ const Home: NextPage<Props> = ({ wordings }) => {
 
 	return (
 		<Layout>
-			<DesktopBlob top='0' left='1vw' width='50vw' />
-			<DesktopBlob bottom='0' right='2vw' width='50vw' />
+			<DesktopBlob bottom='0' left='1vw' width='60vw' />
+			<DesktopBlob top='0' right='2vw' width='60vw' />
 
 			<Section id="home">
 				<Stack>

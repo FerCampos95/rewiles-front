@@ -6,8 +6,8 @@ export function createGradientBottom(color1: string, color2: string) {
 	return `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
 
-export function createGradientRight(color1: string, color2: string) {
-	return `linear-gradient(to right, ${color1}, ${color2})`;
+export function createGradientLeft(color1: string, color2: string) {
+	return `linear-gradient(to left, ${color1}, ${color2})`;
 }
 
 // SETUP DARK COLORS
@@ -85,7 +85,7 @@ const GREY = {
 
 const GRADIENTS = {
 	primary: createGradientBottom(SECONDARY.main, PRIMARY.main),
-	secondary: createGradientRight(SECONDARY.main, PRIMARY.main),
+	secondary: createGradientLeft(SECONDARY.main, PRIMARY.main),
 	success: createGradientBottom(SUCCESS.light, SUCCESS.main),
 	warning: createGradientBottom(WARNING.light, WARNING.main),
 	error: createGradientBottom(ERROR.light, ERROR.main),

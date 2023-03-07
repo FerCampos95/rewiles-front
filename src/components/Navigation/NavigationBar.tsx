@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import LogoSVG from '@/assets/images/LogoSVG';
-import { Grid, MenuList } from '@mui/material';
+import { Grid, MenuList, useTheme } from '@mui/material';
 import { ListItem } from '@mui/material';
 
 const pages = [{
@@ -27,6 +27,7 @@ const pages = [{
 }];
 
 function NavigationBar() {
+	const theme = useTheme();
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
 	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -38,7 +39,7 @@ function NavigationBar() {
 	};
 
 	return (
-		<AppBar position="fixed" component="nav">
+		<AppBar position="fixed" component="nav" sx={{ background: theme.palette.background.default }}>
 			<Container maxWidth="xl">
 				<Toolbar>
 					<Box sx={{ mr: 1, display: 'flex', alignItems: 'center' }}>
