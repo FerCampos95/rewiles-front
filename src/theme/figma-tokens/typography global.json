@@ -2,7 +2,7 @@
   "h1": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "300",
       "fontSize": "60px",
       "lineHeight": "70px"
     },
@@ -11,7 +11,7 @@
   "h2": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "300",
       "fontSize": "48px",
       "lineHeight": "54px"
     },
@@ -20,7 +20,7 @@
   "h3": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "34px",
       "lineHeight": "40px"
     },
@@ -29,7 +29,7 @@
   "h4": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "24px",
       "lineHeight": "30px"
     },
@@ -38,7 +38,7 @@
   "h5": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "20px",
       "lineHeight": "26px"
     },
@@ -56,7 +56,7 @@
   "Avatar Initials": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "20px",
       "lineHeight": "20px"
     },
@@ -65,7 +65,7 @@
   "subtitle1": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "18px",
       "lineHeight": "24px"
     },
@@ -74,7 +74,7 @@
   "body1": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "16px",
       "lineHeight": "25px"
     },
@@ -83,7 +83,7 @@
   "Menu Item": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "16px",
       "lineHeight": "24px"
     },
@@ -92,7 +92,7 @@
   "Input Text": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "16px",
       "lineHeight": "24px"
     },
@@ -101,7 +101,7 @@
   "Alert Title": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "24px"
     },
@@ -110,7 +110,7 @@
   "button": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "22px",
       "textCase": "none",
@@ -121,7 +121,7 @@
   "Bottom Navigation Active Label": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "24px",
       "textCase": "none"
@@ -131,7 +131,7 @@
   "Menu Item Dense": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "24px",
       "textCase": "none"
@@ -141,7 +141,7 @@
   "Table Header": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "15px",
       "lineHeight": "16px",
       "textCase": "none"
@@ -151,7 +151,7 @@
   "Button Medium": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "15px",
       "lineHeight": "22px",
       "textCase": "none"
@@ -161,9 +161,9 @@
   "Button Large": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "16px",
-      "lineHeight": "26px",
+      "lineHeight": "24px",
       "textCase": "none"
     },
     "type": "typography"
@@ -171,7 +171,7 @@
   "Button Small": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "14px",
       "lineHeight": "18px",
       "textCase": "none"
@@ -181,7 +181,7 @@
   "subtitle2": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "700",
+      "fontWeight": "500",
       "fontSize": "16px",
       "lineHeight": "24px",
       "textCase": ""
@@ -191,7 +191,7 @@
   "body2": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "300",
+      "fontWeight": "400",
       "fontSize": "16px",
       "lineHeight": "25px",
       "textCase": "none"
@@ -211,7 +211,7 @@
   "Chip": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "18px",
       "textCase": "none"
@@ -221,7 +221,7 @@
   "overline": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "32px",
       "textCase": "uppercase"
@@ -231,7 +231,7 @@
   "caption": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "500",
+      "fontWeight": "400",
       "fontSize": "14px",
       "lineHeight": "20px",
       "textCase": "none"
@@ -271,7 +271,7 @@
   "Tooltip": {
     "value": {
       "fontFamily": "Inter",
-      "fontWeight": "400",
+      "fontWeight": "500",
       "fontSize": "12px",
       "lineHeight": "16px",
       "textCase": "none"

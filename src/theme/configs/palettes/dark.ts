@@ -8,52 +8,52 @@ export function createGradient(color1: string, color2: string) {
 
 // SETUP DARK COLORS
 const PRIMARY = {
-	lighter: colors.blue[50].value,
-	light: colors.blue[200].value,
-	main: colors.blue[400].value,
-	dark: colors.blue[600].value,
-	darker: colors.blue[800].value,
-	shadow: colors.blue.shadow.value,
+	lighter: colors.purple[50].value,
+	light: colors.purple[200].value,
+	main: colors.purple[400].value,
+	dark: colors.purple[600].value,
+	darker: colors.purple[800].value,
+	shadow: colors.purple.shadow24p.value,
 };
 const SECONDARY = {
-	lighter: colors.purple[100].value,
-	light: colors.purple[300].value,
-	main: colors.purple[400].value,
-	dark: colors.purple[500].value,
-	darker: colors.purple[600].value,
-	shadow: colors.purple.shadow.value,
+	lighter: colors.orange[50].value,
+	light: colors.orange[200].value,
+	main: colors.orange[400].value,
+	dark: colors.orange[600].value,
+	darker: colors.orange[800].value,
+	shadow: colors.orange.shadow24p.value,
 };
 const INFO = {
-	lighter: colors.lightblue[100].value,
-	light: colors.lightblue[300].value,
+	lighter: colors.lightblue[50].value,
+	light: colors.lightblue[200].value,
 	main: colors.lightblue[400].value,
-	dark: colors.lightblue[500].value,
-	darker: colors.lightblue[600].value,
-	shadow: colors.lightblue.shadow.value,
+	dark: colors.lightblue[600].value,
+	darker: colors.lightblue[800].value,
+	shadow: colors.lightblue.shadow24p.value,
 };
 const SUCCESS = {
-	lighter: colors.green[100].value,
-	light: colors.green[300].value,
+	lighter: colors.green[500].value,
+	light: colors.green[200].value,
 	main: colors.green[400].value,
-	dark: colors.green[500].value,
-	darker: colors.green[600].value,
-	shadow: colors.green.shadow.value,
+	dark: colors.green[600].value,
+	darker: colors.green[800].value,
+	shadow: colors.green.shadow24p.value,
 };
 const WARNING = {
-	lighter: colors.yellow[100].value,
-	light: colors.yellow[300].value,
+	lighter: colors.yellow[50].value,
+	light: colors.yellow[200].value,
 	main: colors.yellow[400].value,
-	dark: colors.yellow[500].value,
-	darker: colors.yellow[600].value,
-	shadow: colors.yellow.shadow.value,
+	dark: colors.yellow[600].value,
+	darker: colors.yellow[800].value,
+	shadow: colors.yellow.shadow24p.value,
 };
 const ERROR = {
-	lighter: colors.red[100].value,
-	light: colors.red[300].value,
+	lighter: colors.red[50].value,
+	light: colors.red[200].value,
 	main: colors.red[400].value,
-	dark: colors.red[500].value,
-	darker: colors.red[600].value,
-	shadow: colors.red.shadow.value,
+	dark: colors.red[600].value,
+	darker: colors.red[800].value,
+	shadow: colors.red.shadow24p.value,
 };
 
 const GREY = {
@@ -121,9 +121,9 @@ const COMMON = {
 
 const darkPalette = {
 	...COMMON,
-	text: { primary: GREY[100], secondary: GREY[400], disabled: GREY[500] },
+	text: { primary: GREY[50], secondary: GREY[100], disabled: GREY[400] },
 	background: { paper: GREY[800], default: GREY[900], neutral: GREY[500_16] },
-	action: { active: GREY[400], ...COMMON.action },
+	action: { active: GREY[500], ...COMMON.action },
 };
 
 export default darkPalette;

@@ -13,7 +13,7 @@ const PRIMARY = {
 	main: colors.blue[500].value,
 	dark: colors.blue[600].value,
 	darker: colors.blue[700].value,
-	shadow: colors.blue.shadow.value,
+	shadow: colors.blue.shadow24p.value,
 };
 const SECONDARY = {
 	lighter: colors.purple[200].value,
@@ -21,7 +21,7 @@ const SECONDARY = {
 	main: colors.purple[500].value,
 	dark: colors.purple[600].value,
 	darker: colors.purple[700].value,
-	shadow: colors.purple.shadow.value,
+	shadow: colors.purple.shadow24p.value,
 };
 const INFO = {
 	lighter: colors.lightblue[200].value,
@@ -29,7 +29,7 @@ const INFO = {
 	main: colors.lightblue[500].value,
 	dark: colors.lightblue[600].value,
 	darker: colors.lightblue[700].value,
-	shadow: colors.lightblue.shadow.value,
+	shadow: colors.lightblue.shadow24p.value,
 };
 const SUCCESS = {
 	lighter: colors.green[200].value,
@@ -37,7 +37,7 @@ const SUCCESS = {
 	main: colors.green[500].value,
 	dark: colors.green[600].value,
 	darker: colors.green[700].value,
-	shadow: colors.green.shadow.value,
+	shadow: colors.green.shadow24p.value,
 };
 const WARNING = {
 	lighter: colors.yellow[200].value,
@@ -45,7 +45,7 @@ const WARNING = {
 	main: colors.yellow[500].value,
 	dark: colors.yellow[600].value,
 	darker: colors.yellow[700].value,
-	shadow: colors.yellow.shadow.value,
+	shadow: colors.yellow.shadow24p.value,
 };
 const ERROR = {
 	lighter: colors.red[200].value,
@@ -53,7 +53,7 @@ const ERROR = {
 	main: colors.red[500].value,
 	dark: colors.red[600].value,
 	darker: colors.red[700].value,
-	shadow: colors.red.shadow.value,
+	shadow: colors.red.shadow24p.value,
 };
 
 const GREY = {
