@@ -76,7 +76,7 @@ const Home: NextPage<Props> = ({ wordings }) => {
 			<DesktopBlob top='0' left='1vw' width='50vw' />
 			<DesktopBlob bottom='0' right='2vw' width='50vw' />
 
-			<Section>
+			<Section id="home">
 				<Stack>
 					<Typography variant="h4" paragraph component="h1" textAlign="center">
 						Rewiles
@@ -103,7 +103,8 @@ const Home: NextPage<Props> = ({ wordings }) => {
 			</Section>
 
 			<Stack>
-				<DesktopBlob left='40vw' top='0' width='50vw' style={{ position: 'sticky', height: '0px' }} />
+				<DesktopBlob left='40vw' top='10vh' width='50vw' style={{ position: 'sticky', height: '0px' }} />
+
 				<Section>
 					<Grid container>
 						<Stack maxWidth={468} gap={8}>

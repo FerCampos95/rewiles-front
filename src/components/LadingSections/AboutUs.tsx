@@ -10,6 +10,7 @@ const AboutUs = () => {
 			justifyContent="center"
 			width="100%"
 			bgcolor="#EDD4FF"
+			position="relative"
 			p={4}
 		>
 			<Grid container justifyContent="center">

@@ -1,6 +1,4 @@
-// definir colores colores en textos
-
-// MOBILE
-// sincronizar transiciones
-
+// cargar jsons de conf
+// sincronizar transiciones de about
 // funcionalidad form
+// mobile cambiar color de border solid 4px blue a degrade
