@@ -4,6 +4,7 @@ import lightPalette from './palettes/light';
 export interface GradientsPaletteOptions {
   primary: string;
   secondary: string;
+  tertiary: string;
   info: string;
   success: string;
   warning: string;

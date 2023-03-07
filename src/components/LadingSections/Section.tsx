@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import { Container, Grid, SxProps } from '@mui/material';
+import { Container, Grid, SxProps, useTheme } from '@mui/material';
 import useDevice from '@/hooks/utils/useDevice';
 
 type Props = {
@@ -11,6 +11,7 @@ type Props = {
 
 const Section: FC<Props> = ({ children, id, sx, withBorder }) => {
 	const { isMobile } = useDevice();
+	const theme = useTheme();
 
 	return (
 		<Container id={id} maxWidth="lg" sx={{
@@ -23,12 +24,20 @@ const Section: FC<Props> = ({ children, id, sx, withBorder }) => {
 			px: 4,
 			...sx
 		}}>
+			{withBorder && isMobile && <Grid
+				sx={{
+					width:'4px',
+					height: '100%',
+					alignItems:'center',
+					justifyContent:'center',
+					background: theme.palette.gradients.tertiary
+				}}
+			/>}
 			<Grid container sx={{
 				width:'100%',
 				height: '100%',
 				alignItems:'center',
 				justifyContent:'center',
-				borderLeft: withBorder && isMobile ? 'solid 4px blue': '',
 			}}>
 				{children}
 			</Grid>

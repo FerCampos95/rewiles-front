@@ -2,8 +2,10 @@ import figmaColors from '../../figma-tokens/color global.json';
 
 export const colors = figmaColors['Color Global'];
 
-export function createGradientBottom(color1: string, color2: string) {
-	return `linear-gradient(to bottom, ${color1}, ${color2})`;
+export function createGradientBottom(color1: string, color2: string, color3?: string) {
+	return color3
+		? `linear-gradient(to bottom, ${color1}, ${color2}, ${color3})`
+		: `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
 
 export function createGradientLeft(color1: string, color2: string) {
@@ -86,6 +88,7 @@ const GREY = {
 const GRADIENTS = {
 	primary: createGradientBottom(SECONDARY.main, PRIMARY.main),
 	secondary: createGradientLeft(SECONDARY.main, PRIMARY.main),
+	tertiary: createGradientBottom(SECONDARY.main, PRIMARY.main, SECONDARY.main),
 	success: createGradientBottom(SUCCESS.light, SUCCESS.main),
 	warning: createGradientBottom(WARNING.light, WARNING.main),
 	error: createGradientBottom(ERROR.light, ERROR.main),

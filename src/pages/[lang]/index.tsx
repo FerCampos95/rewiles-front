@@ -83,11 +83,11 @@ const Home: NextPage<Props> = ({ wordings }) => {
 						Rewiles
 					</Typography>
 					<Grid container justifyContent="center">
-						<Typography variant="h3" >
-							Unleash your organization&apos;s&nbsp;
+						<Typography variant={isMobile ? 'h4' : 'h3'} >
+							Unleash your organization&apos;s
 						</Typography>
 						<Typography
-							variant="h3"
+							variant={isMobile ? 'h4' : 'h3'}
 							textAlign="center"
 							sx={{
 								background: theme.palette.gradients.primary,
@@ -95,14 +95,14 @@ const Home: NextPage<Props> = ({ wordings }) => {
 								WebkitTextFillColor: 'transparent',
 							}}
 						>
-							potential.
+							&nbsp;potential.
 						</Typography>
 					</Grid>
 					<Grid container justifyContent="center">
-						<Typography variant="h3" textAlign="center">
+						<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center">
 							Achieve&nbsp;
 						</Typography>
-						<Typography variant="h3" textAlign="center"
+						<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center"
 							sx={{
 								background: theme.palette.gradients.primary,
 								WebkitBackgroundClip: 'text',
@@ -169,8 +169,17 @@ const Home: NextPage<Props> = ({ wordings }) => {
 							We create an action plan
 						</Typography>
 					</Grid>
-					<Grid sx={{ px: 4, ...onlyMobile }}>
-						<Typography sx={{ pl: 4, borderLeft: 'solid 4px blue' }} variant="body1">
+					<Grid sx={{ px: 4, height: '100%', ...onlyMobile }}>
+						<Grid
+							sx={{
+								width: '14px',
+								height: '15vh',
+								alignItems:'center',
+								justifyContent:'center',
+								background: theme.palette.gradients.tertiary
+							}}
+						/>
+						<Typography sx={{ pl: 4 }} variant="body1">
 							Our strategic approach involves developing a plan of action to achieve specific goals. It’s important to plan and prepare to ensure that resources are used effectively and goals are achieved efficiently.
 						</Typography>
 					</Grid>
