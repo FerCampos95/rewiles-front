@@ -1,9 +1,14 @@
 import { NextPage } from 'next';
 import { Grid, Typography, Stack, useTheme } from '@mui/material';
+
 import Layout from '@/components/Layout';
 import Section from '@/components/LadingSections/Section';
+import Home from '@/components/LadingSections/Home';
 import AboutUs from '@/components/LadingSections/AboutUs';
 import Contact from '@/components/LadingSections/Contact';
+
+import { onlyDesktop, onlyMobile } from '@/utils/hidden';
+import useDevice from '@/hooks/utils/useDevice';
 
 import DesignSVG from '@/assets/images/DesignSVG';
 import DesignOpsSVG from '@/assets/images/DesignOpsSVG';
@@ -12,16 +17,14 @@ import DevOpsSVG from '@/assets/images/DevOpsSVG';
 import QASVG from '@/assets/images/QASVG';
 import SecuritySVG from '@/assets/images/SecuritySVG';
 
+
 import DesktopBlob from '@/assets/blobs/DesktopBlob';
-import { onlyDesktop, onlyMobile } from '@/utils/hidden';
-import useDevice from '@/hooks/utils/useDevice';
 import DesignIcon from '@/assets/icons/DesignIcon';
 import DesignOpsIcon from '@/assets/icons/DesignOpsIcon';
 import DevIcon from '@/assets/icons/DevIcon';
 import DevOpsIcon from '@/assets/icons/DevOpsIcon';
 import QAIcon from '@/assets/icons/QAIcon';
 import SecurityIcon from '@/assets/icons/SecurityIcon';
-
 
 const ACTIONS_PLAN = [
 	{
@@ -62,7 +65,7 @@ const ACTIONS_PLAN = [
 	}
 ];
 
-const Home: NextPage = () => {
+const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
 	const theme = useTheme();
 
@@ -71,42 +74,7 @@ const Home: NextPage = () => {
 			<DesktopBlob bottom='0' left='1vw' width='60vw' />
 			<DesktopBlob top='0' right='2vw' width='60vw' />
 
-			<Section id="home">
-				<Stack>
-					<Typography variant="h4" paragraph component="h1" textAlign="center">
-						Rewiles
-					</Typography>
-					<Grid container justifyContent="center">
-						<Typography variant={isMobile ? 'h4' : 'h3'} >
-							Unleash your organization&apos;s
-						</Typography>
-						<Typography
-							variant={isMobile ? 'h4' : 'h3'}
-							textAlign="center"
-							sx={{
-								background: theme.palette.gradients.primary,
-								WebkitBackgroundClip: 'text',
-								WebkitTextFillColor: 'transparent',
-							}}
-						>
-							&nbsp;potential.
-						</Typography>
-					</Grid>
-					<Grid container justifyContent="center">
-						<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center">
-							Achieve&nbsp;
-						</Typography>
-						<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center"
-							sx={{
-								background: theme.palette.gradients.primary,
-								WebkitBackgroundClip: 'text',
-								WebkitTextFillColor: 'transparent',
-							}}>
-							greatness.
-						</Typography>
-					</Grid>
-				</Stack>
-			</Section>
+			<Home />
 
 			<Section id="what-we-do">
 				<Stack maxWidth={468} gap={16} textAlign="center">
@@ -232,4 +200,4 @@ const Home: NextPage = () => {
 	);
 };
 
-export default Home;
+export default Landing;
