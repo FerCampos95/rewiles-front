@@ -11,7 +11,7 @@ const Contact = () => {
 			alignItems="center"
 			justifyContent="center"
 			width="100%"
-			bgcolor="#EDD4FF"
+			// bgcolor="#EDD4FF"
 			position="relative"
 			p={4}
 		>
@@ -52,9 +52,11 @@ const Contact = () => {
 					</Grid>
 
 					<Grid container justifyContent="center" mt={18}>
-						<Button type='submit' sx={{
-							background: theme.palette.gradients.secondary,
-						}}>
+						<Button
+							type='submit'
+							size="large"
+							sx={{ background: theme.palette.gradients.secondary }}
+						>
 							Submit
 						</Button>
 					</Grid>
