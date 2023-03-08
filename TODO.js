@@ -1,9 +1,9 @@
 
 // sincronizar transiciones de about
-// funcionalidad form
 
 // limpiar lenguajes
 
 // separar diseño mobile de desktop
 
+// funcionalidad form
 // color de formulario
