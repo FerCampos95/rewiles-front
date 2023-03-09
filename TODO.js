@@ -1,5 +1,4 @@
 
-// home link on logo
 // review background of navigation mobile dropdown
 
 // sincronizar transiciones de about

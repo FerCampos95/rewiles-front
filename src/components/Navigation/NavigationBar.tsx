@@ -43,7 +43,9 @@ function NavigationBar() {
 			<Container maxWidth="xl">
 				<Toolbar>
 					<Box sx={{ mr: 1, display: 'flex', alignItems: 'center' }}>
-						<LogoSVG width='30px' />
+						<Link href='/#home' scroll={false}>
+							<LogoSVG width='30px' />
+						</Link>
 					</Box>
 
 					<Grid
