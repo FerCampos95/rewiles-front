@@ -1,7 +1,7 @@
 import useDevice from '@/hooks/utils/useDevice';
 import { Grid, Stack, Typography, useTheme } from '@mui/material';
 import { FC } from 'react';
-import Section from './Section';
+import Section from '../Navigation/Section';
 
 const Home: FC = () => {
 	const { isMobile } = useDevice();
@@ -11,35 +11,39 @@ const Home: FC = () => {
 		<Section id="home">
 			<Stack>
 				<Typography variant="h4" paragraph component="h1" textAlign="center">
-						Rewiles
+          Rewiles
 				</Typography>
 				<Grid container justifyContent="center">
-					<Typography variant={isMobile ? 'h4' : 'h3'} >
-							Unleash your organization&apos;s
+					<Typography variant={isMobile ? 'h4' : 'h3'} component="h3">
+            Unleash your organization&apos;s
 					</Typography>
 					<Typography
 						variant={isMobile ? 'h4' : 'h3'}
 						textAlign="center"
+						component="h3"
 						sx={{
 							background: theme.palette.gradients.primary,
 							WebkitBackgroundClip: 'text',
 							WebkitTextFillColor: 'transparent',
 						}}
 					>
-							&nbsp;potential.
+            &nbsp;potential.
 					</Typography>
 				</Grid>
 				<Grid container justifyContent="center">
-					<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center">
-							Achieve&nbsp;
+					<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center" component="h3">
+            Achieve&nbsp;
 					</Typography>
-					<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center"
+					<Typography
+						variant={isMobile ? 'h4' : 'h3'}
+						textAlign="center"
+						component="h3"
 						sx={{
 							background: theme.palette.gradients.primary,
 							WebkitBackgroundClip: 'text',
 							WebkitTextFillColor: 'transparent',
 						}}>
-							greatness.
+            greatness.
 					</Typography>
 				</Grid>
 			</Stack>
