@@ -1,18 +1,21 @@
-import * as React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
+import {
+	Grid,
+	MenuList,
+	ListItem,
+	AppBar,
+	Box,
+	Toolbar,
+	IconButton,
+	Menu,
+	Container,
+	Button,
+	useTheme } from '@mui/material';
+import { Close, Menu as MenuIcon } from '@mui/icons-material';
+
 import LogoSVG from '@/assets/images/LogoSVG';
-import { Grid, MenuList, useTheme } from '@mui/material';
-import { ListItem } from '@mui/material';
 import { onlyDesktop, onlyMobile } from '@/utils/hidden';
-import { Close } from '@mui/icons-material';
 
 const pages = [{
 	label: 'What we do',
@@ -25,12 +28,12 @@ const pages = [{
 	link: '#contact'
 }, {
 	label: 'Careers',
-	link: '#careers'
+	link: '/careers'
 }];
 
 function NavigationBar() {
 	const theme = useTheme();
-	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
 	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
 		setAnchorElNav(event.currentTarget);
@@ -51,7 +54,7 @@ function NavigationBar() {
 					</Box>
 
 					<Grid container justifyContent="space-evenly" gap={4} sx={{ ...onlyDesktop }}>
-						{pages.map(({label, link}) => (
+						{pages.map(({ label, link }) => (
 							<Button
 								key={link}
 								variant='text'
@@ -69,7 +72,7 @@ function NavigationBar() {
 
 					<Grid container justifyContent="flex-end" sx={{ ...onlyMobile }}>
 						<IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
-							{anchorElNav ? <Close /> :<MenuIcon />}
+							{anchorElNav ? <Close /> : <MenuIcon />}
 						</IconButton>
 						<Menu
 							anchorEl={anchorElNav}
@@ -90,7 +93,7 @@ function NavigationBar() {
 							}}
 						>
 							<MenuList sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-								{pages.map(({label, link}) => (
+								{pages.map(({ label, link }) => (
 									<ListItem key={link} onClick={handleCloseNavMenu} dense>
 										<Button
 											fullWidth
@@ -101,7 +104,7 @@ function NavigationBar() {
 											LinkComponent={Link}
 											scroll={false}
 											onClick={handleCloseNavMenu}
-											sx={{ color: 'white' }}
+											sx={{ color: theme.palette.text.primary }}
 										>
 											{label}
 										</Button>
@@ -115,4 +118,5 @@ function NavigationBar() {
 		</AppBar>
 	);
 }
+
 export default NavigationBar;
