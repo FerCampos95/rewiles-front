@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import LogoSVG from '@/assets/images/LogoSVG';
 import { Grid, MenuList, useTheme } from '@mui/material';
 import { ListItem } from '@mui/material';
+import { onlyDesktop, onlyMobile } from '@/utils/hidden';
+import { Close } from '@mui/icons-material';
 
 const pages = [{
 	label: 'What we do',
@@ -48,14 +50,7 @@ function NavigationBar() {
 						</Link>
 					</Box>
 
-					<Grid
-						container
-						gap={4}
-						sx={{
-							display: { xs: 'none', md: 'flex' },
-							justifyContent: 'space-evenly',
-						}}
-					>
+					<Grid container justifyContent="space-evenly" gap={4} sx={{ ...onlyDesktop }}>
 						{pages.map(({label, link}) => (
 							<Button
 								key={link}
@@ -65,20 +60,16 @@ function NavigationBar() {
 								LinkComponent={Link}
 								scroll={false}
 								onClick={handleCloseNavMenu}
-								sx={{ my: 2, color: 'white', display: 'block' }}
+								sx={{ my: 2, color: theme.palette.text.primary }}
 							>
 								{label}
 							</Button>
 						))}
 					</Grid>
 
-					<Grid
-						container
-						justifyContent="flex-end"
-						sx={{ display: { xs: 'flex', md: 'none' } }}
-					>
+					<Grid container justifyContent="flex-end" sx={{ ...onlyMobile }}>
 						<IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
-							<MenuIcon />
+							{anchorElNav ? <Close /> :<MenuIcon />}
 						</IconButton>
 						<Menu
 							anchorEl={anchorElNav}
@@ -94,6 +85,7 @@ function NavigationBar() {
 									maxWidth: '100%',
 									left: 0,
 									right: 0,
+									backgroundColor: theme.palette.background.default
 								}
 							}}
 						>
