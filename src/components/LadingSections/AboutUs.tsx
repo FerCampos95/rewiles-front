@@ -13,7 +13,7 @@ const AboutUs = () => {
 			justifyContent="center"
 			width="100%"
 			bgcolor="#EDD4FF"
-			position="relative"
+			// position="relative"
 			p={4}
 			py={16}
 		>

@@ -19,13 +19,13 @@ import { onlyDesktop, onlyMobile } from '@/utils/hidden';
 
 const pages = [{
 	label: 'What we do',
-	link: '#what-we-do',
+	link: '/#what-we-do',
 }, {
 	label: 'About Us',
-	link: '#about-us',
+	link: '/#about-us',
 }, {
 	label: 'Contact',
-	link: '#contact'
+	link: '/#contact'
 }, {
 	label: 'Careers',
 	link: '/careers'

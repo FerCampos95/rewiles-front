@@ -1,8 +1,8 @@
-// sincronizar transiciones de about
-
-// funcionalidad form
+// funcionalidad forms
+// funcionalidad de atach file form careers
 // color de formulario
 
 // add description in head of page
 
-// create career page
+
+// sincronizar transiciones de about
