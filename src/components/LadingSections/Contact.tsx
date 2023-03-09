@@ -1,7 +1,9 @@
 import DesktopBlob from '@/assets/blobs/DesktopBlob';
+import useDevice from '@/hooks/utils/useDevice';
 import { Button, Grid, Stack, TextField, Typography, useTheme } from '@mui/material';
 
 const Contact = () => {
+	const { isMobile } = useDevice();
 	const theme = useTheme();
 
 	return (
@@ -19,7 +21,7 @@ const Contact = () => {
 			<Grid container justifyContent="center">
 				<Grid container maxWidth={630} spacing={4}>
 					<Grid item xs={12}>
-						<Typography variant="h1" gutterBottom textAlign="center" component={'h2'}>
+						<Typography variant={isMobile ? 'h2' : 'h1'} gutterBottom textAlign="center" component={'h2'}>
               Contact
 						</Typography>
 					</Grid>

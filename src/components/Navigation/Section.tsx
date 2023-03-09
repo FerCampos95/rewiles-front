@@ -1,16 +1,14 @@
 import { FC, ReactNode } from 'react';
 import { Container, Grid, SxProps, useTheme } from '@mui/material';
-import useDevice from '@/hooks/utils/useDevice';
 
 type Props = {
   children?: ReactNode;
 	id?: string;
 	sx?: SxProps
-	withBorder?: boolean;
+	withLeftLine?: boolean;
 };
 
-const Section: FC<Props> = ({ children, id, sx, withBorder }) => {
-	const { isMobile } = useDevice();
+const Section: FC<Props> = ({ children, id, sx, withLeftLine }) => {
 	const theme = useTheme();
 
 	return (
@@ -24,12 +22,10 @@ const Section: FC<Props> = ({ children, id, sx, withBorder }) => {
 			px: 4,
 			...sx
 		}}>
-			{withBorder && isMobile && <Grid
+			{withLeftLine && <Grid
 				sx={{
 					width:'4px',
 					height: '100%',
-					alignItems:'center',
-					justifyContent:'center',
 					background: theme.palette.gradients.tertiary
 				}}
 			/>}
