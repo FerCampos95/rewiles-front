@@ -4,6 +4,13 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import LogoSVG from '@/assets/images/LogoSVG';
+import { FC } from 'react';
+import { Divider, Stack } from '@mui/material';
+import { onlyDesktop, onlyMobile } from '@/utils/hidden';
+import useDevice from '@/hooks/utils/useDevice';
+
+export const FOOTER_MOBILE_HEIGHT = '186px';
+export const FOOTER_DESKTOP_HEIGHT = '144px';
 
 function Copyright() {
 	return (
@@ -18,7 +25,13 @@ function Copyright() {
 	);
 }
 
-export default function Footer() {
+type Props = {
+	isLight?: boolean;
+}
+
+const Footer: FC<Props> = ({ isLight }) => {
+	const { isMobile } = useDevice();
+
 	return (
 		<Box
 			component="footer"
@@ -26,11 +39,17 @@ export default function Footer() {
 				py: 3,
 				px: 2,
 				mt: 'auto',
-				bgcolor: '#EDD4FF',
-				color: '#0D0D0D'
+				height: isMobile ? FOOTER_MOBILE_HEIGHT : FOOTER_DESKTOP_HEIGHT,
+				...(isLight && {
+					bgcolor: '#EDD4FF',
+					color: '#0D0D0D'
+				})
 			}}
 		>
-			<Container maxWidth="lg">
+			<Grid container justifyContent="center">
+				<Divider sx={{ width: '80%' }} />
+			</Grid>
+			<Container maxWidth="lg" sx={{ my: 8 }} >
 				<Grid
 					container
 					justifyContent="space-between"
@@ -43,13 +62,13 @@ export default function Footer() {
 						alignItems="center"
 						justifyContent="center"
 						mb={4}
-						sx={{ display: { md: 'none', xs: 'flex' }}}
+						sx={{ ...onlyMobile }}
 					>
 						<Typography variant="subtitle1">
-								Contact
+							Contact
 						</Typography>
 						<Typography variant="subtitle1">
-								info@rewiles.com
+							info@rewiles.com
 						</Typography>
 					</Grid>
 					<Grid item>
@@ -61,16 +80,20 @@ export default function Footer() {
 						</Grid>
 						<Copyright />
 					</Grid>
-					<Grid item sx={{ display: { md: 'block', xs: 'none' }}}>
-						<Typography variant="subtitle1">
-							Contact
-						</Typography>
-						<Typography variant="body1">
-							info@rewiles.com
-						</Typography>
+					<Grid item sx={{ ...onlyDesktop }}>
+						<Stack gap={2}>
+							<Typography variant="subtitle1">
+								Contact
+							</Typography>
+							<Typography variant="body1">
+								info@rewiles.com
+							</Typography>
+						</Stack>
 					</Grid>
 				</Grid>
 			</Container>
 		</Box>
 	);
-}
+};
+
+export default Footer;

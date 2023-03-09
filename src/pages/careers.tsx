@@ -3,6 +3,8 @@ import { Button, Grid, Typography, Select, TextField, useTheme, FormControl, Men
 
 import Layout from '@/components/Layout';
 import Section from '@/components/Navigation/Section';
+import useDevice from '@/hooks/utils/useDevice';
+import { FOOTER_DESKTOP_HEIGHT, FOOTER_MOBILE_HEIGHT } from '@/components/Navigation/Footer';
 
 const PROFESSION_LIST = [
 	'Fullstack Developer',
@@ -15,10 +17,13 @@ const PROFESSION_LIST = [
 
 const Careers: NextPage = () => {
 	const theme = useTheme();
+	const { isMobile } = useDevice();
+
+	const footerHeight = isMobile ? FOOTER_MOBILE_HEIGHT : FOOTER_DESKTOP_HEIGHT;
 
 	return (
 		<Layout>
-			<Section sx={{ py: 16, height: 'auto' }}>
+			<Section sx={{ py: 16, height: isMobile ? 'auto' : `calc(100vh - ${footerHeight})` }}>
 				<Stack alignItems="center" gap={25}>
 					<Typography variant="h3" component="h1" textAlign="center" maxWidth={468}>
             We&apos;re always looking for talented individuals to join our team.

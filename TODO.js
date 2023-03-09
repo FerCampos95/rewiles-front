@@ -1,6 +1,3 @@
-// divider on footer
-// footer with 2 themes
-
 // add description in head of page
 
 // funcionalidad forms

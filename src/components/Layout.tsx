@@ -5,9 +5,10 @@ import NavigationBar from './Navigation/NavigationBar';
 
 type Props = {
 	children: ReactNode;
+	isLightFooter?: boolean;
 }
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ children, isLightFooter }) => {
 	return (
 		<div>
 			<Head>
@@ -27,7 +28,7 @@ const Layout: FC<Props> = ({ children }) => {
 			<main>
 				{children}
 			</main>
-			<Footer />
+			<Footer isLight={isLightFooter} />
 		</div>
 	);
 };

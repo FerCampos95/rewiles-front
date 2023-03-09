@@ -18,7 +18,7 @@ const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
 
 	return (
-		<Layout>
+		<Layout isLightFooter>
 			{isMobile ? (
 				<>
 					<MobileBlob top='22%' left='0' width='70vw' />
