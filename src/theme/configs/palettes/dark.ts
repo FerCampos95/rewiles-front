@@ -89,6 +89,7 @@ const GRADIENTS = {
 	primary: createGradientBottom(SECONDARY.main, PRIMARY.main),
 	secondary: createGradientLeft(SECONDARY.main, PRIMARY.main),
 	tertiary: createGradientBottom(SECONDARY.main, PRIMARY.main, SECONDARY.main),
+	info: createGradientBottom(INFO.light, INFO.main),
 	success: createGradientBottom(SUCCESS.light, SUCCESS.main),
 	warning: createGradientBottom(WARNING.light, WARNING.main),
 	error: createGradientBottom(ERROR.light, ERROR.main),
@@ -129,7 +130,7 @@ const COMMON = {
 const darkPalette = {
 	...COMMON,
 	text: { primary: GREY[50], secondary: GREY[100], disabled: GREY[400] },
-	background: { paper: GREY[800], default: GREY[900], neutral: GREY[500_16] },
+	background: { paper: GREY[800], default: GREY[900], neutral: GREY[500_8] },
 	action: { active: GREY[500], ...COMMON.action },
 };
 

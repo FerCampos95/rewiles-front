@@ -2,26 +2,32 @@ import figmaColors from '../../figma-tokens/color global.json';
 
 export const colors = figmaColors['Color Global'];
 
-export function createGradient(color1: string, color2: string) {
-	return `linear-gradient(to bottom, ${color1}, ${color2})`;
+export function createGradientBottom(color1: string, color2: string, color3?: string) {
+	return color3
+		? `linear-gradient(to bottom, ${color1}, ${color2}, ${color3})`
+		: `linear-gradient(to bottom, ${color1}, ${color2})`;
+}
+
+export function createGradientLeft(color1: string, color2: string) {
+	return `linear-gradient(to left, ${color1}, ${color2})`;
 }
 
 // SETUP COLORS
 const PRIMARY = {
-	lighter: colors.blue[200].value,
-	light: colors.blue[400].value,
-	main: colors.blue[500].value,
-	dark: colors.blue[600].value,
-	darker: colors.blue[700].value,
-	shadow: colors.blue.shadow24p.value,
-};
-const SECONDARY = {
 	lighter: colors.purple[200].value,
 	light: colors.purple[400].value,
 	main: colors.purple[500].value,
 	dark: colors.purple[600].value,
 	darker: colors.purple[700].value,
 	shadow: colors.purple.shadow24p.value,
+};
+const SECONDARY = {
+	lighter: colors.orange[200].value,
+	light: colors.orange[400].value,
+	main: colors.orange[500].value,
+	dark: colors.orange[600].value,
+	darker: colors.orange[700].value,
+	shadow: colors.orange.shadow24p.value,
 };
 const INFO = {
 	lighter: colors.lightblue[200].value,
@@ -80,11 +86,13 @@ const GREY = {
 };
 
 const GRADIENTS = {
-	primary: createGradient(PRIMARY.light, PRIMARY.main),
-	info: createGradient(INFO.light, INFO.main),
-	success: createGradient(SUCCESS.light, SUCCESS.main),
-	warning: createGradient(WARNING.light, WARNING.main),
-	error: createGradient(ERROR.light, ERROR.main),
+	primary: createGradientBottom(SECONDARY.main, PRIMARY.main),
+	secondary: createGradientLeft(SECONDARY.main, PRIMARY.main),
+	tertiary: createGradientBottom(SECONDARY.main, PRIMARY.main, SECONDARY.main),
+	info: createGradientBottom(INFO.light, INFO.main),
+	success: createGradientBottom(SUCCESS.light, SUCCESS.main),
+	warning: createGradientBottom(WARNING.light, WARNING.main),
+	error: createGradientBottom(ERROR.light, ERROR.main),
 };
 
 // TODO define
@@ -122,7 +130,7 @@ const COMMON = {
 const lightPalette = {
 	...COMMON,
 	text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
-	background: { paper: GREY[100], default: '#0D0D0D', neutral: GREY[200] },
+	background: { paper: GREY[100], default: GREY[200], neutral: GREY[200] },
 	action: { active: GREY[600], ...COMMON.action },
 };
 
