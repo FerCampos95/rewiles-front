@@ -1,6 +1,4 @@
 
-// separar diseño mobile de desktop
-
 // home link on logo
 // review background of navigation mobile dropdown
 
