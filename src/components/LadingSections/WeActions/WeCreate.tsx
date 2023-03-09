@@ -34,8 +34,15 @@ const WeCreate: FC = () => {
 				</Typography>
 			</Grid>
 
-			{ACTIONS_PLAN.map(({ title, description, IconComponent }) => (
-				<Section key={title} withLeftLine>
+			{ACTIONS_PLAN.map(({ title, description, IconComponent }, index) => (
+				<Section
+					key={title}
+					withLeftLine
+					sx={index === ACTIONS_PLAN.length - 1 
+						? { pb: 64, mb: 64 } 
+						: {}
+					}
+				>
 					<Grid container alignItems="center">
 						<Grid item xs={12} md={6}>
 							<Stack maxWidth={468} gap={4} sx={{ pl: { xs: 4 } }}>

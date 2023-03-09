@@ -10,12 +10,12 @@ type Props = {
   bottom?: string;
 }
 
-const DesktopBlob: FC<Props> = (props) => {
+const MobileBlob: FC<Props> = (props) => {
 	return (
 		<Grid sx={{
 			position: 'absolute',
-			filter: 'blur(60px)',
-			opacity: '0.3',
+			filter: 'blur(50px)',
+			opacity: '0.6',
 			width: '500px',
 			...props,
 			...props.style
@@ -46,4 +46,4 @@ const DesktopBlob: FC<Props> = (props) => {
 	);
 };
 
-export default DesktopBlob;
+export default MobileBlob;

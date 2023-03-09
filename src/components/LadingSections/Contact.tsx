@@ -14,10 +14,16 @@ const Contact = () => {
 			justifyContent="center"
 			width="100%"
 			// bgcolor="#EDD4FF"
-			// position="relative"
+			position="relative"
 			p={4}
 		>
-			<DesktopBlob right='0' bottom='0' width="50vw" style={{ position: 'absolute' }}/>
+			{!isMobile && (
+				<DesktopBlob
+					right='0' bottom='0' width="50vw"
+					style={{ position: 'absolute' }}
+				/>
+			)}
+
 			<Grid container justifyContent="center">
 				<Grid container maxWidth={630} spacing={4}>
 					<Grid item xs={12}>

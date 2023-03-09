@@ -14,7 +14,7 @@ const Section: FC<Props> = ({ children, id, sx, withLeftLine }) => {
 	return (
 		<Container id={id} maxWidth="lg" sx={{
 			position:'relative',
-			height: '100vh',
+			height: withLeftLine ? '70vh' : '100vh',
 			display: 'flex',
 			alignItems:'center',
 			justifyContent:'center',

@@ -6,15 +6,27 @@ import Section from '../../Navigation/Section';
 import DesktopBlob from '@/assets/blobs/DesktopBlob';
 import useDevice from '@/hooks/utils/useDevice';
 import WeCreate from './WeCreate';
+import MobileBlob from '@/assets/blobs/MobileBlob';
 
 const WeActions: FC = () => {
 	const { isMobile } = useDevice();
 
 	return (
-		<Stack>
-			<DesktopBlob left='40vw' top='10vh' width='50vw' style={{ position: 'sticky', height: '0px' }} />
+		<Stack sx={{ position: 'relative' }}>
+			{!isMobile && (
+				<DesktopBlob
+					left='40vw' top='10vh' width='50vw'
+					style={{ position: 'sticky', height: '0px' }}
+				/>
+			)}
 
 			<Section>
+				{isMobile && (
+					<MobileBlob
+						top='75%' left="1%" width='100vw'
+						style={{ position: 'absolute', height: '0px' }}
+					/>
+				)}
 				<Grid container>
 					<Stack maxWidth={468} gap={8}>
 						<Typography variant={isMobile ? 'h4' : 'h3'} component="h2">
