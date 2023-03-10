@@ -10,6 +10,12 @@ export default function Button(theme: Theme) {
 			styleOverrides: {
 				root: {
 				},
+				containedPrimary: {
+					background: theme.palette.gradients.secondary,
+					'&:hover': {
+						opacity: 0.85
+					}
+				},
 			},
 		},
 	};

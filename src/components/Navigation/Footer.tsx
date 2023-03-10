@@ -36,7 +36,6 @@ const Footer: FC<Props> = ({ isLight }) => {
 		<Box
 			component="footer"
 			sx={{
-				py: 3,
 				px: 2,
 				mt: 'auto',
 				height: isMobile ? FOOTER_MOBILE_HEIGHT : FOOTER_DESKTOP_HEIGHT,
@@ -72,13 +71,15 @@ const Footer: FC<Props> = ({ isLight }) => {
 						</Typography>
 					</Grid>
 					<Grid item>
-						<Grid container alignItems="center" gap={2}>
-							<LogoSVG width="30" />
-							<Typography variant="body1" fontSize={40}>
+						<Grid container gap={4}>
+							<Grid container alignItems="center" gap={2}>
+								<LogoSVG width="30" />
+								<Typography variant="body1" fontSize={40}>
 								Rewiles
-							</Typography>
+								</Typography>
+							</Grid>
+							<Copyright />
 						</Grid>
-						<Copyright />
 					</Grid>
 					<Grid item sx={{ ...onlyDesktop }}>
 						<Stack gap={2}>

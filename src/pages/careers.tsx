@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { Button, Grid, Typography, Select, TextField, useTheme, FormControl, MenuItem, InputLabel, Stack } from '@mui/material';
+import { Button, Grid, Typography, Select, TextField, FormControl, MenuItem, InputLabel, Stack } from '@mui/material';
 
 import Layout from '@/components/Layout';
 import Section from '@/components/Navigation/Section';
@@ -16,7 +16,6 @@ const PROFESSION_LIST = [
 ];
 
 const Careers: NextPage = () => {
-	const theme = useTheme();
 	const { isMobile } = useDevice();
 
 	const footerHeight = isMobile ? FOOTER_MOBILE_HEIGHT : FOOTER_DESKTOP_HEIGHT;
@@ -70,11 +69,7 @@ const Careers: NextPage = () => {
 									</FormControl>
 								</Grid>
 								<Grid container justifyContent="center" mt={18}>
-									<Button
-										type='submit'
-										size="large"
-										sx={{ background: theme.palette.gradients.secondary }}
-									>
+									<Button type='submit' size="large">
                     Submit
 									</Button>
 								</Grid>

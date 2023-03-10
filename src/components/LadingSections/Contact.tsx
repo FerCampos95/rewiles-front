@@ -75,17 +75,14 @@ const Contact = () => {
 							<TextField
 								fullWidth
 								label="Description"
+								multiline
 								rows={5}
 								helperText="Please enter the details of your request. A member of our support staff will respond as soon as possible"
 							/>
 						</Grid>
 
 						<Grid container justifyContent="center" mt={18}>
-							<Button
-								type='submit'
-								size="large"
-								sx={{ background: theme.palette.gradients.secondary }}
-							>
+							<Button type='submit' size="large">
 								Submit
 							</Button>
 						</Grid>
