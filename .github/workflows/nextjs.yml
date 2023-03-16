@@ -76,8 +76,8 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_CONTACT_FORM_ID: ${{ secrets.NEXT_PUBLIC_CONTACT_FORM_ID }}
-          NEXT_PUBLIC_CAREERS_FORM_ID: ${{ secrets.NEXT_PUBLIC_CAREERS_FORM_ID }}
+          NEXT_PUBLIC_CONTACT_FORM_ID: mvonqwqr
+          NEXT_PUBLIC_CAREERS_FORM_ID: xpzelkzk
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
