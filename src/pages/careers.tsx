@@ -11,7 +11,7 @@ import SuccessForm from '@/components/Careers/SuccessForm';
 
 const Careers: NextPage = () => {
 	const { isMobile } = useDevice();
-	const formProps = useForm('xpzelkzk');
+	const formProps = useForm(process.env.NEXT_PUBLIC_CAREERS_FORM_ID as string);
 	const [state] = formProps;
 
 	const footerHeight = isMobile ? FOOTER_MOBILE_HEIGHT : FOOTER_DESKTOP_HEIGHT;
