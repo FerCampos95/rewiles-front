@@ -1,6 +1,6 @@
 {
   "name": "rewiles-front",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -15,7 +15,6 @@
     "@formspree/react": "^2.4.1",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.9",
-    "@mui/x-date-pickers": "^5.0.18",
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
