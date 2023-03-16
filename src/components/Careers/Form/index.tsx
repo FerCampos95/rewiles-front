@@ -1,9 +1,6 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import { Button, Grid, Select, TextField, FormControl, MenuItem, InputLabel } from '@mui/material';
 import { TUseForm } from '@formspree/react';
-
-import useDevice from '@/hooks/utils/useDevice';
-import InputFile from '../InputFile';
 
 const PROFESSION_LIST = [
 	'Fullstack Developer',
@@ -19,13 +16,8 @@ type Props = {
 }
 
 const CareersForm: FC<Props> = ({ formProps }) => {
-	const [state, handleSubmit] = formProps;
-	const { isMobile } = useDevice();
-
-	useEffect(() => {
-		console.log('state.errors :>> ', state.errors);
-	}, [state.errors]);
-
+	const [, handleSubmit] = formProps;
+  
 	return (
 		<form onSubmit={handleSubmit} encType="multipart/form-data">
 			<Grid container spacing={4}>
@@ -48,6 +40,15 @@ const CareersForm: FC<Props> = ({ formProps }) => {
 					/>
 				</Grid>
 				<Grid item xs={12}>
+					<TextField
+						required
+						fullWidth
+						name="email"
+						label="Email"
+						type="email"
+					/>
+				</Grid>
+				<Grid item xs={12}>
 					<FormControl fullWidth required>
 						<InputLabel>Profession</InputLabel>
 						<Select
@@ -66,7 +67,13 @@ const CareersForm: FC<Props> = ({ formProps }) => {
 					</FormControl>
 				</Grid>
 				<Grid item xs={12}>
-					<InputFile state={state} />
+					<TextField
+						required
+						fullWidth
+						name="resume"
+						label="Resume / LinkedIn URL"
+						type="url"
+					/>
 				</Grid>
 
 				<Grid container justifyContent="center" mt={18}>
