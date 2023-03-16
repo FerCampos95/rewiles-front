@@ -14,13 +14,13 @@ const Home: FC = () => {
           Rewiles
 				</Typography>
 				<Grid container justifyContent="center">
-					<Typography variant={isMobile ? 'h4' : 'h3'} component="h3">
+					<Typography variant={isMobile ? 'h4' : 'h3'} component="h2">
             Unleash your organization&apos;s
 					</Typography>
 					<Typography
 						variant={isMobile ? 'h4' : 'h3'}
 						textAlign="center"
-						component="h3"
+						component="h2"
 						sx={{
 							background: theme.palette.gradients.primary,
 							WebkitBackgroundClip: 'text',
@@ -31,13 +31,13 @@ const Home: FC = () => {
 					</Typography>
 				</Grid>
 				<Grid container justifyContent="center">
-					<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center" component="h3">
+					<Typography variant={isMobile ? 'h4' : 'h3'} textAlign="center" component="h2">
             Achieve&nbsp;
 					</Typography>
 					<Typography
 						variant={isMobile ? 'h4' : 'h3'}
 						textAlign="center"
-						component="h3"
+						component="h2"
 						sx={{
 							background: theme.palette.gradients.primary,
 							WebkitBackgroundClip: 'text',

@@ -48,8 +48,8 @@ function NavigationBar() {
 			<Container maxWidth="xl">
 				<Toolbar>
 					<Box sx={{ mr: 1, display: 'flex', alignItems: 'center' }}>
-						<Link href='/#home' scroll={false}>
-							<LogoSVG width='30px' />
+						<Link href='/#home' scroll={false} aria-label="Go to home">
+							<LogoSVG width='30px' aria-label="" />
 						</Link>
 					</Box>
 
@@ -71,7 +71,7 @@ function NavigationBar() {
 					</Grid>
 
 					<Grid container justifyContent="flex-end" sx={{ ...onlyMobile }}>
-						<IconButton size="large" onClick={handleOpenNavMenu} color="inherit">
+						<IconButton size="large" onClick={handleOpenNavMenu} color="inherit" aria-label="menu">
 							{anchorElNav ? <Close /> : <MenuIcon />}
 						</IconButton>
 						<Menu

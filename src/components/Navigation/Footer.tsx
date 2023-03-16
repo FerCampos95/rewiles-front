@@ -63,10 +63,10 @@ const Footer: FC<Props> = ({ isLight }) => {
 						mb={4}
 						sx={{ ...onlyMobile }}
 					>
-						<Typography variant="subtitle1">
+						<Typography variant="subtitle1" component="p">
 							Contact
 						</Typography>
-						<Typography variant="subtitle1">
+						<Typography variant="subtitle1" component="p">
 							info@rewiles.com
 						</Typography>
 					</Grid>
@@ -75,7 +75,7 @@ const Footer: FC<Props> = ({ isLight }) => {
 							<Grid container alignItems="center" gap={2}>
 								<LogoSVG width="30" />
 								<Typography variant="body1" fontSize={40}>
-								Rewiles
+									Rewiles
 								</Typography>
 							</Grid>
 							<Copyright />
@@ -83,10 +83,10 @@ const Footer: FC<Props> = ({ isLight }) => {
 					</Grid>
 					<Grid item sx={{ ...onlyDesktop }}>
 						<Stack gap={2}>
-							<Typography variant="subtitle1">
+							<Typography variant="subtitle1" component="p">
 								Contact
 							</Typography>
-							<Typography variant="body1">
+							<Typography variant="body1" component="p">
 								info@rewiles.com
 							</Typography>
 						</Stack>
