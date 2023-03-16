@@ -13,8 +13,8 @@ export default function Button(theme: Theme) {
 				containedPrimary: {
 					background: theme.palette.gradients.secondary,
 					'&:hover': {
-						opacity: 0.85
-					}
+						opacity: 0.85,
+					},
 				},
 			},
 		},

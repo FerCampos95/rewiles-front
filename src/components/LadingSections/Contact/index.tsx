@@ -1,5 +1,5 @@
 import { useForm } from '@formspree/react';
-import { createTheme, ThemeOptions, Typography } from '@mui/material';
+import { createTheme, ThemeOptions } from '@mui/material';
 import { Grid, Stack, ThemeProvider, useTheme } from '@mui/material';
 
 import palette from '@/theme/configs/palette';
@@ -10,6 +10,7 @@ import DesktopBlob from '@/assets/blobs/DesktopBlob';
 import useDevice from '@/hooks/utils/useDevice';
 
 import Form from './Form';
+import SuccessForm from '@/components/Careers/SuccessForm';
 
 const Contact = () => {
 	const formProps = useForm('mvonqwqr');
@@ -36,7 +37,7 @@ const Contact = () => {
 				alignItems="center"
 				justifyContent="center"
 				width="100%"
-				bgcolor="#EDD4FF"
+				bgcolor={theme.palette.background.default}
 				position="relative"
 				p={4}
 			>
@@ -49,7 +50,7 @@ const Contact = () => {
 
 				<Grid container justifyContent="center">
 					{state.succeeded ? (
-						<Typography color="text.primary">Thanks for joining!</Typography>
+						<SuccessForm hideButton />
 					) : (
 						<Form formProps={formProps} />
 					)}
