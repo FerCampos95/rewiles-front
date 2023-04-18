@@ -12,8 +12,6 @@ const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
 	const theme = useTheme();
 
-	{/* <MobileBlob top='22%' left='0' width='70vw' />
-	<DesktopBlob bottom='0' left='1vw' width='60vw' /> */}
 	return (
 		<SimpleLayout>
 			{isMobile ? (
@@ -44,7 +42,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.primary,
+								background: theme.palette.gradients.secondary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}
@@ -61,7 +59,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.primary,
+								background: theme.palette.gradients.secondary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}>
