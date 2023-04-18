@@ -1,46 +1,77 @@
 import { NextPage } from 'next';
-import { Grid } from '@mui/material';
-
-import Layout from '@/components/Layout';
-
-import Home from '@/components/LadingSections/Home';
-import AboutUs from '@/components/LadingSections/AboutUs';
-import Contact from '@/components/LadingSections/Contact';
-import WhatWeDo from '@/components/LadingSections/WhatWeDo';
-import WeActions from '@/components/LadingSections/WeActions';
 
 import useDevice from '@/hooks/utils/useDevice';
 
-import DesktopBlob from '@/assets/blobs/DesktopBlob';
-import MobileBlob from '@/assets/blobs/MobileBlob';
+import SimpleLayout from '@/components/SimpleLayout';
+import { Grid, Stack, Typography, useTheme } from '@mui/material';
+import ComingSoon from '@/components/ComingSoon';
+import LogoSVG from '@/assets/images/LogoSVG';
+import NewDesktopBlob from '@/assets/blobs/NewDesktopBlob';
 
 const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
+	const theme = useTheme();
 
+	{/* <MobileBlob top='22%' left='0' width='70vw' />
+	<DesktopBlob bottom='0' left='1vw' width='60vw' /> */}
 	return (
-		<Layout isLightFooter>
+		<SimpleLayout>
 			{isMobile ? (
 				<>
-					<MobileBlob top='22%' left='0' width='70vw' />
-					<MobileBlob bottom='18%' right='0' width='70vw' />
+					<NewDesktopBlob left="1%" width="70vw" />
+					<NewDesktopBlob right="1%" bottom="1%" width="70vw" />
 				</>
 			) : (
 				<>
-					<DesktopBlob bottom='0' left='1vw' width='60vw' />
-					<DesktopBlob top='0' right='2vw' width='60vw' />
+					<NewDesktopBlob left="10%" />
+					<NewDesktopBlob right="10%" bottom="15%" />
 				</>
 			)}
-
-			<Home />
-			<WhatWeDo />
-			<WeActions />
-			
-
-			<Grid>
-				<AboutUs />
-				<Contact />
-			</Grid>
-		</Layout>
+			<Stack justifyContent="center" minHeight="100vh" gap={16}>
+				<Stack justifyContent="center" alignItems="center">
+					<Grid container justifyContent="center" alignItems="center" gap={2}>
+						<LogoSVG width={isMobile ? '30' : '40'} />
+						<Typography variant="h1" component="h1" textAlign="center" fontSize={isMobile ? 40 : 55}>
+							Rewiles
+						</Typography>
+					</Grid>
+					<Grid container justifyContent="center">
+						<Typography variant={isMobile ? 'h5' : 'h3'} component="h2">
+							Unleash your organization&apos;s
+						</Typography>
+						<Typography
+							variant={isMobile ? 'h5' : 'h3'}
+							textAlign="center"
+							component="h2"
+							sx={{
+								background: theme.palette.gradients.primary,
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}
+						>
+							&nbsp;potential.
+						</Typography>
+					</Grid>
+					<Grid container justifyContent="center">
+						<Typography variant={isMobile ? 'h5' : 'h3'} textAlign="center" component="h2">
+							Achieve&nbsp;
+						</Typography>
+						<Typography
+							variant={isMobile ? 'h5' : 'h3'}
+							textAlign="center"
+							component="h2"
+							sx={{
+								background: theme.palette.gradients.primary,
+								WebkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}>
+							greatness.
+						</Typography>
+					</Grid>
+				</Stack>
+				<ComingSoon />
+			</Stack>
+		</SimpleLayout>
 	);
 };
 
