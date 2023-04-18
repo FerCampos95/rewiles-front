@@ -12,6 +12,8 @@ const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
 	const theme = useTheme();
 
+	{/* <MobileBlob top='22%' left='0' width='70vw' />
+	<DesktopBlob bottom='0' left='1vw' width='60vw' /> */}
 	return (
 		<SimpleLayout>
 			{isMobile ? (
