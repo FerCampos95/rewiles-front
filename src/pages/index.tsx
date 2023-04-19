@@ -44,7 +44,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.secondary,
+								background: theme.palette.gradients.primary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}
@@ -61,7 +61,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.secondary,
+								background: theme.palette.gradients.primary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}>
