@@ -1,14 +1,12 @@
 import { useMemo, ReactNode } from 'react';
 // material
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import {
 	createTheme,
 	ThemeOptions,
-	StyledEngineProvider,
+	// StyledEngineProvider,
 } from '@mui/material/styles';
-// hooks
-import useSettings from './SettingsContext';
-//
+
 import shape from '../configs/shape';
 import palette from '../configs/palette';
 import typography from '../configs/typography';
@@ -17,7 +15,6 @@ import componentsOverride from '../overrides';
 import shadows, { customShadows } from '../configs/shadows';
 import spacing from '../configs/spacing';
 import GlobalStyles from '../globalStyles';
-import { MemUIThemeWrapperProvider } from './ThemeContext';
 
 // ----------------------------------------------------------------------
 
@@ -26,32 +23,28 @@ type ThemeConfigProps = {
 };
 
 export default function ThemeConfig({ children }: ThemeConfigProps) {
-	const { themeMode, toggleMode } = useSettings();
-	const isLight = themeMode === 'light';
 
 	const themeOptions: ThemeOptions = useMemo(
 		() => ({
-			palette: isLight ? { ...palette.light, mode: 'light' } : { ...palette.dark, mode: 'dark' },
+			palette: palette.dark,
 			shape,
 			typography,
 			breakpoints,
 			spacing,
-			shadows: isLight ? shadows.light : shadows.dark,
-			customShadows: isLight ? customShadows.light : customShadows.dark,
+			shadows: shadows.dark,
+			customShadows: customShadows.dark,
 		}),
-		[isLight],
+		[],
 	);
 
 	const theme = createTheme(themeOptions);
 	theme.components = componentsOverride(theme);
 
 	return (
-		<StyledEngineProvider injectFirst>
-			<MemUIThemeWrapperProvider theme={theme} toggleMode={toggleMode}>
-				<CssBaseline />
-				<GlobalStyles />
-				{children}
-			</MemUIThemeWrapperProvider>
-		</StyledEngineProvider>
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<GlobalStyles />
+			{children}
+		</ThemeProvider>
 	);
 }
