@@ -1,12 +1,12 @@
-import MemUIThemeProvider from '@/theme/context';
+import ThemeConfig from '@/theme/context/ThemeConfig';
 import type { AppProps } from 'next/app';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<MemUIThemeProvider>
+		<ThemeConfig>
 			<GoogleAnalytics trackPageViews />
 			<Component {...pageProps} />
-		</MemUIThemeProvider>
+		</ThemeConfig>
 	);
 }

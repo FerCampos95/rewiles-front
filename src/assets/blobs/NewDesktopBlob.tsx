@@ -14,7 +14,7 @@ const NewDesktopBlob: FC<Props> = (props) => {
 	return (
 		<Grid sx={{
 			position: 'absolute',
-			filter: 'blur(60px)',
+			filter: 'blur(100px)',
 			opacity: '0.3',
 			width: '500px',
 			...props,

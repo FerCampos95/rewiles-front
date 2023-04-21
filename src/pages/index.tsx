@@ -7,6 +7,7 @@ import { Grid, Stack, Typography, useTheme } from '@mui/material';
 import ComingSoon from '@/components/ComingSoon';
 import LogoSVG from '@/assets/images/LogoSVG';
 import NewDesktopBlob from '@/assets/blobs/NewDesktopBlob';
+import NewDesktopBlob2 from '@/assets/blobs/NewDesktopBlob2';
 
 const Landing: NextPage = () => {
 	const { isMobile } = useDevice();
@@ -19,12 +20,12 @@ const Landing: NextPage = () => {
 			{isMobile ? (
 				<>
 					<NewDesktopBlob left="1%" width="70vw" />
-					<NewDesktopBlob right="1%" bottom="1%" width="70vw" />
+					<NewDesktopBlob2 right="1%" bottom="1%" width="70vw" />
 				</>
 			) : (
 				<>
 					<NewDesktopBlob left="10%" />
-					<NewDesktopBlob right="10%" bottom="15%" />
+					<NewDesktopBlob2 right="10%" bottom="15%" />
 				</>
 			)}
 			<Stack justifyContent="center" minHeight="100vh" gap={16}>
@@ -44,7 +45,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.primary,
+								background: theme.palette.gradients.secondary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}
@@ -61,7 +62,7 @@ const Landing: NextPage = () => {
 							textAlign="center"
 							component="h2"
 							sx={{
-								background: theme.palette.gradients.primary,
+								background: theme.palette.gradients.secondary,
 								WebkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}>
